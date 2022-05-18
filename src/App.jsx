@@ -3,6 +3,7 @@ import './App.css'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import RestProfile from './components/restaurant/RestProfile';
 import Orders from './components/Orders/Orders';
+import Helper from './components/Orders/Helper';
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path='/' element={<RestProfile />} />
           <Route path='/dashboard/order' element={<Orders />} />
+          <Route path='/helper' element={<Helper />} />
         </Routes>
       </BrowserRouter>
     </div>

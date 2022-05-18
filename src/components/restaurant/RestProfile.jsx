@@ -24,8 +24,8 @@ function RestProfile() {
           <BiUser className="ml-3 text-2xl" />
         </div>
       </div>
-      <div className="flex w-full">
-        <div className="flex flex-col w-[40%] items-end px-4 pt-3">
+      <div className="flex w-full rest1">
+        <div className="flex flex-col w-[40%] min-w-[300px] rleft items-end px-4 pt-3">
           <div className="border-[1px] py-3 w-[300px]">
             <h1 className="font-semibold">1.Create your restaurant profile</h1>
             <div

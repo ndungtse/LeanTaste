@@ -3,7 +3,7 @@ import React from "react";
 function Reg2() {
   return (
     <div className="w-[60%] flex flex-col items-center p-[3%]">
-      <div className="flex flex-col py-[5%] px-[6%] border-2">
+      <div className="flex flex-col py-[5%] w-full px-[6%] border-2">
         <h1 className="font-semibold text-left mt-4">
           Restaurant Type (restaurant, pub, hotel, other)
         </h1>
@@ -18,7 +18,7 @@ function Reg2() {
           </option>
         </select>
         <h1 className="font-semiblod mt-4">Opening Hours</h1>
-        <div className="flex items-center">
+        <div className="flex items-center w-full inpu2">
           <div className="flex px-2 h-10 border-[1px] mt-4 items-center">
             <p>From</p>
             <input
