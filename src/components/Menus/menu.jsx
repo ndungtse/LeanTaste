@@ -19,7 +19,7 @@ export default function Menu() {
              <SideBar />
         <div className="w-5/6 h-full bg-[#F2F5FF]">
             <div className="flex items-center justify-between w-1/6 h-[6vh] absolute right-0 mr-24 mt-10">
-                <div className="flex items-center justify-around w-2/6 h-5/6 border-r-2">
+                <div className="flex items-center justify-around w-2/6 h-5/6 border-r-2 border-solid border-[#0B6041]">
                 <BiSearch className="text-[#000] text-xl"/>
 <BiBell className="text-[#000] text-xl"/>
                 </div>
