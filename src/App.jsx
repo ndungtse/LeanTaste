@@ -12,7 +12,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<RestProfile />} />
-          <Route path='/dashboard/order' element={<Orders />} />
+          <Route path='/dashboard/order'element={<Orders />} />
+          <Route path='/menu' element={<Menu/>} />
         </Routes>
       </BrowserRouter>
     </div>

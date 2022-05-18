@@ -11,7 +11,7 @@ import {
 
 function SideBar() {
   return (
-    <div className="h-full py-8 bg-black w-[200px] flex flex-col justify-between">
+    <div className="h-screen py-8 bg-black w-[200px] flex flex-col justify-between">
       <h1 className="text-3xl flex justify-center w-full font-bold text-white">
         <p>Lean</p> <span className="text-[#0B6041]">Taste</span>
       </h1>
@@ -26,7 +26,7 @@ function SideBar() {
         </div>
         <div className="flex cursor-pointer mt-6 mx-auto items-center w-full rounded-lg p-2 hover:bg-[#0B6041]">
           <BiCart />
-          <p className="ml-6">Ordes</p>
+          <p className="ml-6">Orders</p>
         </div>
         <div className="flex cursor-pointer mt-6 mx-auto items-center w-full rounded-lg p-2 hover:bg-[#0B6041]">
           <BiMenu />
