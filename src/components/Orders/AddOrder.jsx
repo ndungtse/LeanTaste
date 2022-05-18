@@ -30,7 +30,7 @@ function AddOrder() {
                      type="radio" name="order" id="order" />
                      <label htmlFor="order"><BiCheckCircle 
                      className='text-white bg-[#0B6041] cursor-pointer rounded-full text-2xl' /></label>
-                    <p className="font-semibold ml-3">Dessert</p>
+                    <p className="font-semibold ml-3">Main</p>
                 </div>
                 <div className="flex items-center
                   rounded-md text-white justify-center bg-[#0B6041] py-1 px-3">New</div>
@@ -42,7 +42,19 @@ function AddOrder() {
                      type="radio" name="order" id="order" />
                      <label htmlFor="order"><BiCheckCircle 
                      className='text-white bg-[#0B6041] cursor-pointer rounded-full text-2xl' /></label>
-                    <p className="font-semibold ml-3">Dessert</p>
+                    <p className="font-semibold ml-3">Drink</p>
+                </div>
+                <div className="flex items-center
+                  rounded-md text-white justify-center border-2 text-[#0B6041] border-[#0B6041] py-1 px-3">Default</div>
+            </div>
+            <div className="flex w-full border-2 items-center justify-between p-3">
+                <div className="flex items-center">
+                    <input
+                     className='hidden'
+                     type="radio" name="order" id="order" />
+                     <label htmlFor="order"><BiCheckCircle 
+                     className='text-white bg-[#0B6041] cursor-pointer rounded-full text-2xl' /></label>
+                    <p className="font-semibold ml-3">Appetizer</p>
                 </div>
                 <div className="flex items-center
                   rounded-md text-white justify-center bg-[#0B6041] py-1 px-3">New</div>
@@ -54,7 +66,7 @@ function AddOrder() {
                      type="radio" name="order" id="order" />
                      <label htmlFor="order"><BiCheckCircle 
                      className='text-white bg-[#0B6041] cursor-pointer rounded-full text-2xl' /></label>
-                    <p className="font-semibold ml-3">Dessert</p>
+                    <p className="font-semibold ml-3">Starter</p>
                 </div>
                 <div className="flex items-center
                   rounded-md text-white justify-center bg-[#0B6041] py-1 px-3">New</div>

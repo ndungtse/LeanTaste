@@ -35,3 +35,20 @@
   width: 300px!important;
   background-color: white;
 }
+.olist::-webkit-scrollbar{
+  width: 10px;
+  ;
+}
+.olist::-webkit-scrollbar-thumb{
+  background: rgba(184, 186, 190, 0.861);
+  border-radius: 10px
+}
+
+.scr1::-webkit-scrollbar{
+  width: 10px;
+  ;
+}
+.scr1::-webkit-scrollbar-thumb{
+  background: rgba(184, 186, 190, 0.861);
+  border-radius: 10px
+}

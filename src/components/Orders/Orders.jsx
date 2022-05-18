@@ -54,7 +54,7 @@ function Orders() {
               <Order />
             </div>
         </div>
-         <div className={`w-2/5 leftorder flex px-3 flex-col items-center
+         <div className={`w-2/5 scr1 leftorder flex px-3 flex-col items-center
               overflow-auto duration-500 h-[80vh] ${show &&'showleft'}`}>
              <div className="flex flex-col mt-10">
                  <p className="text-xl">Delivered</p>
