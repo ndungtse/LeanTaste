@@ -2,7 +2,7 @@ import React from 'react'
 
 function Order() {
   return (
-    <div className='flex items-center my-2 rounded-xl p-3 px-4 justify-between bg-slate-200'>
+    <div className='flex items-center my-4 rounded-xl p-3 px-4 justify-between bg-slate-200'>
         <h1 className="text-2xl font-semibold">Order 1</h1>
         <div className="flex flex-col items-start">
             <p>Kaffir Lime, Vodk, Lemongrass,Ginger, Citrus</p>

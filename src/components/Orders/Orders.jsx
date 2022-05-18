@@ -2,10 +2,11 @@ import React from "react";
 import SideBar from "../SideBar";
 import { BiBell, BiSearch, BiUser } from "react-icons/bi";
 import Order from "./Order";
+import AddOrder from "./AddOrder";
 
 function Orders() {
   return (
-    <div className="w-full h-screen flex">
+    <div className="w-full h-screen flex overflow-hidden">
       <SideBar />
       <div className="flex flex-col w-full bg-slate-200 h-full pl-10">
         <div className="flex w-full mt-7 px-4 items-center justify-between">
@@ -28,30 +29,42 @@ function Orders() {
                 </div>
                 <div className="flex items-center ml-[6%]">
                     <button className="p-2 w-[100px] px-4 text-white
-                    mx-2 bg-green-900 rounded-lg">New</button>
-                    <button className="p-2 w-[100px] px-4 text-white
-                    mx-2 bg-green-900 rounded-lg">Delivered</button>
-                    <button className="p-2 w-[100px] px-4 text-white
-                    mx-2 bg-green-900 rounded-lg">Rejected</button>
-                    <button className="p-2 w-[100px] px-4 text-white
-                    mx-2 bg-green-900 rounded-lg">All</button>
+                    mx-2 bg-[#0B6041] border-4 border-[#0B6041] rounded-lg">New</button>
+                    <button className="p-2 w-[100px] px-4 
+                    mx-2 text-[#0b6041]  border-4 border-[#0B6041] rounded-lg">Delivered</button>
+                    <button className="p-2 w-[100px] px-4 
+                    mx-2 text-[#0b6041]  border-4 border-[#0B6041] rounded-lg">Rejected</button>
+                    <button className="p-2 w-[100px] px-4 
+                    mx-2 text-[#0b6041]  border-4 border-[#0B6041] rounded-lg">All</button>
                 </div>
             </div>
-            <Order />
+            <div className=" overflow-auto">
+              <Order />
+              <Order />
+              <Order />
+              <Order />
+              <Order />
+              <Order />
+              <Order />
+              <Order />
+            </div>
         </div>
-         <div className="w-2/5 fle flex-col items-center">
+         <div className="w-2/5 flex px-3 flex-col items-center
+              overflow-auto h-[80vh]">
              <div className="flex flex-col mt-10">
-                 <p>Delivered</p>
-                 <h1 className="text-4xl font-semibold">6</h1>
+                 <p className="text-xl">Delivered</p>
+                 <h1 className="text-[4em] font-semibold">6</h1>
              </div>
              <div className="flex flex-col mt-10">
-                 <p>Delivered</p>
-                 <h1 className="text-4xl font-semibold">6</h1>
+                 <p className="text-xl">Rejected</p>
+                 <h1 className="text-[4em] font-semibold">12</h1>
              </div>
              <div className="flex flex-col mt-10">
-                 <p>Delivered</p>
-                 <h1 className="text-4xl font-semibold">6</h1>
+                 <p className="text-xl">All</p>
+                 <h1 className="text-[4em] font-semibold">18</h1>
              </div>
+         <AddOrder />
+         
          </div>
         </div>
       </div>

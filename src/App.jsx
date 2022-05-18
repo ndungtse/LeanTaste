@@ -6,15 +6,13 @@ import Orders from './components/Orders/Orders';
 import Menu from './components/Menus/menu'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<RestProfile />} />
-          <Route path='/dashboard' element={<Orders />} />
-          <Route path='/menu' element={<Menu />} />
+          <Route path='/dashboard/order' element={<Orders />} />
         </Routes>
       </BrowserRouter>
     </div>
