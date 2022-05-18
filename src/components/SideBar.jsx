@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   BiCart,
   BiCog,
@@ -10,8 +10,15 @@ import {
 } from "react-icons/bi";
 
 function SideBar() {
+  const [mobile, setMobile] = useState(false)
+
   return (
-    <div className="h-full py-8 bg-black w-[200px] flex flex-col justify-between">
+    <>
+    <BiMenu
+    onClick={()=> setMobile(!mobile)}
+     className={` ${mobile && 'text-white'} z-10 cursor-pointer absolute top-3 left-3 text-3xl`} />
+    <div className={`${mobile && 'show'}
+      duration-500 sidebar h-full py-8 bg-black w-[200px] flex flex-col justify-between`}>
       <h1 className="text-3xl flex justify-center w-full font-bold text-white">
         <p>Lean</p> <span className="text-[#0B6041]">Taste</span>
       </h1>
@@ -44,6 +51,7 @@ function SideBar() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 
