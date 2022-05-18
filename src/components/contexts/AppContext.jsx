@@ -8,10 +8,10 @@ const api = axios.create({
 
 export default function AppProvider (){
     const [user, setUser] = useState('')
-    // const id 
+    const user_token  = JSON.parse(localStorage.getItem('user'));
 
     const getUser = async()=>{
-        const res = await api.get(`users/`)
+        const res = await api.get(`users/${user.id}`)
     }
 
 }
