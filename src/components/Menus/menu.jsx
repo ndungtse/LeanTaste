@@ -1,4 +1,5 @@
 import React from "react"
+import './menu.css'
 import Box from "./box"
 import {BiPlus, BiSearch, BiBell} from 'react-icons/bi'
 import Image1 from "./images/image1.jpg"
@@ -16,9 +17,9 @@ export default function Menu() {
     return (
         <div className="flex bg-[#F2F5FF] h-[100vh] overflow-hidden">
             
-             <SideBar />
+             <SideBar/>
         <div className="w-5/6 h-full bg-[#F2F5FF]">
-            <div className="flex items-center justify-between w-1/6 h-[6vh] absolute right-0 mr-24 mt-10">
+            <div className="flex items-center justify-between w-1/6 h-[6vh] absolute right-0 mr-24 mt-10 nav" >
                 <div className="flex items-center justify-around w-2/6 h-5/6 border-r-2 border-solid border-[#0B6041]">
                 <BiSearch className="text-[#000] text-xl"/>
 <BiBell className="text-[#000] text-xl"/>
@@ -79,7 +80,7 @@ export default function Menu() {
                    img={Image7} />
                 <Box 
                 descr="Carbonated Water, Phosphoric Acid" 
-                title="Coca Cola - 250 ml" 
+                title="Fanta - 250 ml" 
                 amt="Frw 6,000" 
                 img={Image8} />
                 </div>

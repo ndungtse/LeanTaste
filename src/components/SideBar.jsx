@@ -40,7 +40,7 @@ function SideBar() {
         </div>
         <div className="flex cursor-pointer mt-6 mx-auto items-center w-full rounded-lg p-2 hover:bg-[#0B6041]">
           <BiUser />
-          <p className="ml-6">Settings</p>
+          <p className="ml-6">Account</p>
         </div>
       </div>
     </div>

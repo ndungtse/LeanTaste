@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width:480px) {
+
+    .sidebar {
+        background-color: green;
+    }
+   .nav {
+       background-color: red;
+   }
+}
