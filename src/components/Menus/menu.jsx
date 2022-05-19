@@ -6,11 +6,11 @@ import Image1 from "./images/image1.jpg";
 import SideBar from "../SideBar";
 import "../Orders/order.css";
 import { useApp } from "../contexts/AppContext";
-// import { BiDotsHorizontalRounded } from "react-icons/bi";
 
 export default function Menu() {
   const [show, setShow] = useState(false);
   const { menus } = useApp();
+  console.log(menus);
 
   return (
     <>
@@ -65,11 +65,10 @@ export default function Menu() {
                 onClick={() => setShow(false)}
                 className="flex flex-col menud w-3/5 h-[65vh]  overflow-y-auto"
               >
-                {menus.map((menu) => (
+                {menus.map((menu, index) => (
                   <Box
-                    descr="Carbonated Water, Phosphoric Acid"
-                    title="Coca Cola - 250 ml"
-                    amt="Frw 5,000"
+                  key={index}
+                    menu={menu}
                     img={Image1}
                   />
                 ))}
