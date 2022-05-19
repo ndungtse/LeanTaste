@@ -12,12 +12,13 @@ import Image7 from "./images/image7.jpg"
 import Image8 from "./images/image8.jpg"
 import Profile from "./images/profile.jpg"
 import SideBar from "../SideBar"
+import "../Orders/order.css"
 
 export default function Menu() {
     return (
         <div className="flex bg-[#F2F5FF] h-[100vh] overflow-hidden">
             
-             <SideBar/>
+             <SideBar className="navleft"/>
         <div className="w-5/6 h-full bg-[#F2F5FF]">
             <div className="flex items-center justify-between w-1/6 h-[6vh] absolute right-0 mr-24 mt-10 nav" >
                 <div className="flex items-center justify-around w-2/6 h-5/6 border-r-2 border-solid border-[#0B6041]">
@@ -27,7 +28,7 @@ export default function Menu() {
 <h3>Jacques Kagabo</h3>
 <div className="flex h-10 w-10 rounded-full"><img src={Profile} alt="" className="rounded-full object-cover w-full h-full object-top"/></div>
             </div>
-            <div className=" flex flex-col w-11/12 h-screen bg-[#fff] my-auto mx-auto mt-36 rounded-md overflow-y-auto relative">
+            <div className=" flex flex-col w-11/12 h-screen  bg-[white] my-auto mx-auto mt-36 rounded-md overflow-y-auto relative menu1">
                 <div className="w-6/6 flex">
                     <div className="flex flex-col items-start w-2/6 mt-3 ml-10">
                     <h2 className="font-bold">Menus</h2>
@@ -42,7 +43,7 @@ export default function Menu() {
                     </div>
                 </div>
                 <div className="flex w-6/6 h-full overflow-y-auto mt-10">
-                <div className="flex flex-col w-5/12 h-[65vh] ml-52 overflow-y-auto">
+                <div className="flex flex-col w-5/12 h-[65vh]  ml-52 overflow-y-auto">
                 <Box
                  descr="Carbonated Water, Phosphoric Acid" 
                  title="Coca Cola - 250 ml" 

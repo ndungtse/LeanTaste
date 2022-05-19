@@ -5,11 +5,5 @@
 }
 
 @media screen and (max-width:480px) {
-
-    .sidebar {
-        background-color: green;
-    }
-   .nav {
-       background-color: red;
-   }
+    
 }

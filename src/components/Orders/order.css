@@ -39,7 +39,7 @@
 @media screen and (max-width: 710px) {
   .sidebar{
       position: fixed;
-      left: -500px;
+      left: -500px !important;
       z-index: 2;
       opacity: 0;
       transition: all 0.3s;
