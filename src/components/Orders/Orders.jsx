@@ -3,11 +3,12 @@ import SideBar from "../SideBar";
 import { BiBell, BiDotsHorizontalRounded, BiSearch, BiUser } from "react-icons/bi";
 import Order from "./Order";
 import AddOrder from "./AddOrder";
-import './order.css'
+import './order.css';
+import { useApp } from '../contexts/AppContext'
 
 function Orders() {
   const [show, setShow]= useState(false)
-
+  const { orders } = useApp()
 
   return (
     <>
