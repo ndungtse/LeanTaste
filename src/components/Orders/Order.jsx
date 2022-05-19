@@ -2,11 +2,11 @@ import React from 'react'
 
 function Order() {
   return (
-    <div className='flex items-center my-4 rounded-xl p-3 px-4 justify-between bg-slate-200'>
-        <h1 className="text-2xl font-semibold">Order 1</h1>
-        <div className="flex flex-col mx-auto w-full pl-2 items-start">
-            <p className='text-left'>Kaffir Lime, Vodk, Lemongrass,Ginger, Citrus</p>
-            <p  className='text-left'>Tom Yimmy | x2</p>
+    <div className='flex order items-center my-4 rounded-xl p-3 px-4 justify-between bg-slate-200'>
+        <h1 className="text-2xl font-semibold text-center">Order 1</h1>
+        <div className="flex flex-col items-start ml-2">
+            <p>Kaffir Lime, Vodk, Lemongrass,Ginger, Citrus</p>
+            <p>Tom Yimmy | x2</p>
             <div className="flex items-center">
                 Table 8
             </div>
