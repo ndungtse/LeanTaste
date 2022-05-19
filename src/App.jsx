@@ -5,7 +5,7 @@ import RestProfile from './components/restaurant/RestProfile';
 import Orders from './components/Orders/Orders';
 import Menu from './components/Menus/menu'
 import Logs from './components/Login/Logs';
-import Login from './components/Login/Signup';
+import Login from './components/Login/Login';
 import Home from './components/Home/Home';
 
 function App() {

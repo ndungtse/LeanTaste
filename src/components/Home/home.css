@@ -1,0 +1,17 @@
+
+@media screen and (max-width: 800px) {
+    .card{
+        grid-template-columns: 1fr 1fr;
+    }
+  .home{
+      height: unset;
+  }
+}
+@media screen and (max-width: 600px) {
+    .card{
+        grid-template-columns: 1fr;
+    }
+  .home{
+      height: unset;
+  }
+}
