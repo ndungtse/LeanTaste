@@ -4,6 +4,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import RestProfile from './components/restaurant/RestProfile';
 import Orders from './components/Orders/Orders';
 import Helper from './components/Orders/Helper';
+import Menu from './components/Menus/menu'
 
 function App() {
 
@@ -12,8 +13,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<RestProfile />} />
-          <Route path='/dashboard/order' element={<Orders />} />
-          <Route path='/helper' element={<Helper />} />
+          <Route path='/dashboard/order'element={<Orders />} />
+          <Route path='/menu' element={<Menu/>} />
         </Routes>
       </BrowserRouter>
     </div>
