@@ -3,7 +3,7 @@ import React from "react";
 function Reg2() {
   return (
     <div className="w-[60%] flex flex-col items-center p-[3%]">
-      <div className="flex flex-col py-[5%] px-[6%] border-2">
+      <div className="flex flex-col w-full min-w-[300px] py-[5%] px-[6%] border-2">
         <h1 className="font-semibold text-left mt-4">
           Restaurant Type (restaurant, pub, hotel, other)
         </h1>

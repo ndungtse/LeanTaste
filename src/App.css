@@ -11,6 +11,9 @@
     width: 100%!important;
     padding: 0 10px;
   }
+  .dots{
+    display: block!important;
+  }
 }
 
 @media screen and (max-width: 760px) {
@@ -25,6 +28,18 @@
   }
   .oh1{
     width: 140%;
+  }
+  .all{
+    padding: 0!important;
+  }
+  .menu{
+    display: block!important;
+  }
+  .olist{
+    padding: 0 10px!important;
+  }
+  .order h1{
+    font-size: 1em;
   }
 }
 .show{
@@ -51,4 +66,22 @@
 .scr1::-webkit-scrollbar-thumb{
   background: rgba(184, 186, 190, 0.861);
   border-radius: 10px
+}
+.clickable:checked + .label4 {
+  /* border-color: #005694; */
+  background-color: #0B6041;
+  color: #0B6041;
+}
+
+.clickable{
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+}
+
+@media screen and (max-width: 800px) {
+  .holder{
+    flex-direction: column;
+    align-items: center;
+  }
 }

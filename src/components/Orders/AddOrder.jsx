@@ -14,10 +14,10 @@ function AddOrder() {
             <div className="flex w-full border-2 items-center justify-between p-3">
                 <div className="flex items-center">
                     <input
-                     className='hidden'
+                     className='  clickable '
                      type="radio" name="order" id="order" />
-                     <label htmlFor="order"><BiCheckCircle 
-                     className='text-white bg-[#0B6041] cursor-pointer rounded-full text-2xl' /></label>
+                     <label className='label4 rounded-full border-2 border-gray-500' htmlFor="order"><BiCheckCircle 
+                     className='text-white label4 cursor-pointer rounded-full text-2xl' /></label>
                     <p className="font-semibold ml-3">Dessert</p>
                 </div>
                 <div className="flex items-center
@@ -26,10 +26,10 @@ function AddOrder() {
             <div className="flex w-full border-2 items-center justify-between p-3">
                 <div className="flex items-center">
                     <input
-                     className='hidden'
-                     type="radio" name="order" id="order" />
-                     <label htmlFor="order"><BiCheckCircle 
-                     className='text-white bg-[#0B6041] cursor-pointer rounded-full text-2xl' /></label>
+                     className='  clickable '
+                     type="radio" name="order" id="order1" />
+                     <label className='label4 rounded-full border-2 border-gray-500' htmlFor="order1"><BiCheckCircle 
+                     className='text-white label4 cursor-pointer rounded-full text-2xl' /></label>
                     <p className="font-semibold ml-3">Main</p>
                 </div>
                 <div className="flex items-center
@@ -38,22 +38,22 @@ function AddOrder() {
             <div className="flex w-full border-2 items-center justify-between p-3">
                 <div className="flex items-center">
                     <input
-                     className='hidden'
-                     type="radio" name="order" id="order" />
-                     <label htmlFor="order"><BiCheckCircle 
-                     className='text-white bg-[#0B6041] cursor-pointer rounded-full text-2xl' /></label>
+                     className='  clickable '
+                     type="radio" name="order" id="order2" />
+                     <label className='label4 rounded-full border-2 border-gray-500' htmlFor="order2"><BiCheckCircle 
+                     className='text-white label4 cursor-pointer rounded-full text-2xl' /></label>
                     <p className="font-semibold ml-3">Drink</p>
                 </div>
                 <div className="flex items-center
-                  rounded-md text-white justify-center border-2 text-[#0B6041] border-[#0B6041] py-1 px-3">Default</div>
+                  rounded-md justify-center border-2 text-[#0B6041] border-[#0B6041] py-1 px-3">Default</div>
             </div>
             <div className="flex w-full border-2 items-center justify-between p-3">
                 <div className="flex items-center">
                     <input
-                     className='hidden'
-                     type="radio" name="order" id="order" />
-                     <label htmlFor="order"><BiCheckCircle 
-                     className='text-white bg-[#0B6041] cursor-pointer rounded-full text-2xl' /></label>
+                     className='  clickable '
+                     type="radio" name="order" id="order3" />
+                     <label className='label4 rounded-full border-2 border-gray-500' htmlFor="order3"><BiCheckCircle 
+                     className='text-white label4 cursor-pointer rounded-full text-2xl' /></label>
                     <p className="font-semibold ml-3">Appetizer</p>
                 </div>
                 <div className="flex items-center
@@ -62,10 +62,10 @@ function AddOrder() {
             <div className="flex w-full border-2 items-center justify-between p-3">
                 <div className="flex items-center">
                     <input
-                     className='hidden'
-                     type="radio" name="order" id="order" />
-                     <label htmlFor="order"><BiCheckCircle 
-                     className='text-white bg-[#0B6041] cursor-pointer rounded-full text-2xl' /></label>
+                     className='  clickable '
+                     type="radio" name="order" id="order4" />
+                     <label className='label4 rounded-full border-2 border-gray-500' htmlFor="order4"><BiCheckCircle 
+                     className='text-white label4 cursor-pointer rounded-full text-2xl' /></label>
                     <p className="font-semibold ml-3">Starter</p>
                 </div>
                 <div className="flex items-center

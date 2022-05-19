@@ -12,9 +12,12 @@ function Orders() {
     <div className="w-full h-screen flex overflow-hidden">
       <SideBar />
       <BiDotsHorizontalRounded  onClick={()=> setShow(!show)}
-      className={`absolute text-3xl z-10 right-3 top-[150px] cursor-pointer`} />
-      <div className="flex flex-col w-full bg-slate-200 h-full pl-10">
-        <div className="flex w-full mt-7 px-4 items-center justify-between">
+      className={`absolute hidden dots text-3xl z-10 right-3 top-[130px] cursor-pointer`} />
+      <div
+       className="flex all flex-col overflow-hidden w-full bg-slate-200 h-full pl-10">
+        <div
+        onClick={()=> setShow(false)} 
+        className="flex w-full mt-7 overflow-hidden px-4 items-center justify-between">
           <p className="text-3xl font-semibold">Orders</p>
           <div className="flex">
             <div className="flex text-2xl items-center border-r-2 border-black">
@@ -26,7 +29,9 @@ function Orders() {
           </div>
         </div>
         <div className="flex bg-white  mt-[60px] h-full w-full">
-        <div className="flex olist flex-col w-3/5 pl-8 min-w-[50%]">
+        <div
+        onClick={()=> setShow(false)}
+         className="flex olist flex-col w-3/5 pl-8 min-w-[50%]">
             <div className="flex items-center">
                 <div className="flex flex-col oh1 items-start pt-4">
                     <h1 className="text-2xl font-semibold">Orders</h1>
