@@ -15,3 +15,10 @@
       height: unset;
   }
 }
+.nput{
+    border-width: 0 0 0 0px;
+    transition: all 0.8s;
+}
+.nput:focus{
+    border-color: rgb(23, 170, 79);
+}
