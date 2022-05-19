@@ -58,14 +58,9 @@ function Orders() {
                 </div>
             </div>
             <div className=" olist overflow-auto">
-              <Order />
-              <Order />
-              <Order />
-              <Order />
-              <Order />
-              <Order />
-              <Order />
-              <Order />
+             {orders.map((order, index)=>(
+              <Order key={index} order={order} index={index+1} />
+              ))}
             </div>
         </div>
          <div className={`w-2/5 scr1 leftorder flex px-3 flex-col items-center

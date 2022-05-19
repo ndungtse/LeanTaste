@@ -14,11 +14,19 @@ export const useApp =()=>{
 export default function AppProvider ({children}){
     const [user, setUser] = useState('')
     const [orders, setOrders] = useState([])
+    const [menus, setMenus] = useState([])
     const user_token  = JSON.parse(localStorage.getItem('token'));
 
-    console.log(user_token);
-    const getUser = async()=>{
-        const res = await api.get(`users/${user.id}`)
+    const getMenus = async()=>{
+        const res = await fetch('http://196.223.240.154:8099/supapp/api/menu-items',{
+            method: 'GET',
+            headers: {
+                "accessToken":  `Bearer ${user_token.accessToken}`,
+                'Authorization': `Bearer ${user_token.accessToken}`
+            } ,
+        })
+        const data = await res.json()
+        setMenus(data.content)
     }
 
     const getOrders = async()=>{
@@ -31,22 +39,15 @@ export default function AppProvider ({children}){
         })
         const data = await res.json()
         setOrders(data.content)
-        console.log(data);
-        // const res = await api.get('http://196.223.240.154:8099/supapp/api/orders',{
-        //     method: 'GET',
-        //     headers: {
-        //         "accessToken":  `Bearer ${user_token.accessToken}`,
-        //         'Authorization': `Bearer ${user_token.accessToken}`
-        //     } ,
-        // })
     }
 
     useEffect(()=>{
         getOrders();
-    })
+        getMenus();
+    },[])
 
     return(
-        <AppContext.Provider value={{orders}}>
+        <AppContext.Provider value={{orders, menus}}>
             {children}
         </AppContext.Provider>
     )
