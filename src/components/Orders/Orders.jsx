@@ -17,9 +17,9 @@ function Orders() {
 
   return (
     <>
-      {/* <BiDotsHorizontalRounded onClick={()=> setShow(!show)}
+      <BiDotsHorizontalRounded onClick={()=> setShow(!show)}
         className="text-3xl z-[2] hideright hidden
-         cursor-pointer absolute top-[17vh] right-2" /> */}
+         cursor-pointer absolute top-[17vh] right-2" />
       <div
         onClick={() => setShow(false)}
         className="w-full h-screen flex fixed"
