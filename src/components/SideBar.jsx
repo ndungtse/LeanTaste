@@ -8,8 +8,9 @@ import {
   BiTable,
   BiUser,
 } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
-function SideBar() {
+function SideBar({active}) {
   const [mobile, setMobile] = useState(false)
 
   return (
@@ -23,22 +24,24 @@ function SideBar() {
         <p>Lean</p> <span className="text-[#0B6041]">Taste</span>
       </h1>
       <div className="flex flex-col w-full items-center px-3 text-white">
-        <div className="flex cursor-pointer mt-6 mx-auto items-center w-full rounded-lg p-2 hover:bg-[#0B6041]">
+        <Link to='/' className="flex cursor-pointer mt-6 mx-auto items-center w-full rounded-lg p-2 hover:bg-[#0B6041]">
           <BiGridAlt />
           <p className="ml-6">Overview</p>
-        </div>
-        <div className="flex cursor-pointer mt-6 mx-auto items-center w-full rounded-lg p-2 hover:bg-[#0B6041]">
+        </Link>
+        <Link to='/' className="flex cursor-pointer mt-6 mx-auto items-center w-full rounded-lg p-2 hover:bg-[#0B6041]">
           <BiTable />
           <p className="ml-6">Table</p>
-        </div>
-        <div className="flex cursor-pointer mt-6 mx-auto items-center w-full rounded-lg p-2 hover:bg-[#0B6041]">
+        </Link>
+        <Link to='/dashboard/order' className={`${active==='order' && 'bg-[#0B6041]'}
+        flex cursor-pointer mt-6 mx-auto items-center w-full rounded-lg p-2 hover:bg-[#0B6041]`}>
           <BiCart />
           <p className="ml-6">Orders</p>
-        </div>
-        <div className="flex cursor-pointer mt-6 mx-auto items-center w-full rounded-lg p-2 hover:bg-[#0B6041]">
+        </Link>
+        <Link to='/dashboard/menu' className={`${active==='menu' && 'bg-[#0B6041]'}
+        flex cursor-pointer mt-6 mx-auto items-center w-full rounded-lg p-2 hover:bg-[#0B6041]`}>
           <BiMenu />
           <p className="ml-6">Menu</p>
-        </div>
+        </Link>
       </div>
       <div className="flex flex-col w-full items-center px-3 text-white">
         <div className="flex cursor-pointer mt-6 mx-auto items-center w-full rounded-lg p-2 hover:bg-[#0B6041]">

@@ -19,7 +19,7 @@ function Orders() {
     <div
      onClick={()=> setShow(false)}
      className="w-full h-screen flex overflow-hidden">
-      <SideBar />
+      <SideBar active={`order`} />
       {/* <BiDotsHorizontalRounded  onClick={()=> setShow(!show)}
       className={`absolute hidden dots text-3xl z-10 right-3 top-[130px] cursor-pointer`} /> */}
       <div
