@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react'
 import axios from 'axios'
 
-const api = axios.create({
-    baseURL: "196.223.240.154:8099/supapp/api"
+export const api = axios.create({
+    baseURL: "http://196.223.240.154:8099/supapp/api"
 })
 
 const AppContext = React.createContext()

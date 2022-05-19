@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "./second-form.css";
 import  food  from './images/food.png'
+import { api } from '../contexts/AppContext'
 
 function Login() {
+  const [info, setInfo] = useState({
+     login: '', password: ''
+  })
+
+  const login = async(e)=>{
+    e.preventDefault()
+    console.log(info);
+    const res = await api.post('/auth/signin', info)
+    console.log(res.data);
+    if (res.data.token) {
+      localStorage.setItem('token', JSON.stringify(res.data.token))
+      window.location.replace('http://localhost:3000')
+    }
+  }
+
   return (
     <div  className="h-screen w-full">
       <div className="parents mx-auto">
@@ -23,16 +39,20 @@ function Login() {
                 <p className="p2">to make it a memorable one! </p>
 
                 {/* <p></p> */}
-                <form action="" className="si-form">
+                <form action="" className="si-form" onSubmit={login}>
                   E-mail
-                  <input className="px-3 focus:border-green-800 outline-none"
+                  <input
+                   onClick={(e)=> setInfo({...info, login: e.target.value})}
+                   className="px-3 focus:border-green-800 outline-none"
                    type="text" name="email" />
                   <br />
                   Password
-                  <input className="px-3 focus:border-green-800 outline-none"
+                  <input 
+                  onClick={(e)=> setInfo({...info, password: e.target.value})}
+                  className="px-3 focus:border-green-800 outline-none"
                    type="password" name="password" />
                   <br />
-                  <button>Login</button>
+                  <button type="submit" className="bg-green-800">Login</button>
                   <p>
                     Don't have an account? <strong>Sign</strong>
                   </p>
