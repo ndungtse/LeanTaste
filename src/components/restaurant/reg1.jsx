@@ -11,15 +11,18 @@ function Reg1({info, setInfo}) {
             className='px-3 mt-4 border-[1px] w-full outline-none py-1'
             type="text" placeholder='Restaurant Name' />
             <input 
+            onChange={(e)=> setInfo({...info, completeName: e.target.value})}
             className='px-3 border-[1px] mt-4 w-full outline-none py-1'
             type="text" placeholder='Restaurant Complete Name' />
             <input 
+            onChange={(e)=> setInfo({...info, address: e.target.value})}
             className='px-3 border-[1px] mt-4 w-full outline-none py-1'
             type="text" placeholder='Restaurant Address' />
             <h1 className="font-semibold text-left mt-4">Contacts number of Restaurant</h1>
             <div className="flex px-2 border-[1px] mt-2 items-center">
                 <p>250</p>
                 <input
+                    onChange={(e)=> setInfo({...info, phone: e.target.value})}
                     className='outline-none border-none px-3 py-1'
                  type="text" placeholder='Mobile Number' />
             </div>
@@ -27,13 +30,18 @@ function Reg1({info, setInfo}) {
             <div className="flex px-2 border-[1px] mt-4 items-center">
                 <p>250</p>
                 <input
+                    onChange={(e)=> setInfo({...info, ownerPhoneNumber: e.target.value})}
                     className='outline-none border-none px-3 py-1'
                  type="text" placeholder='Mobile Number' />
             </div>
             <div className="flex items-center w-full justify-between mt-4">
-                <input className='px-3 w-[150px] border-[1px]  outline-none py-1'
+                <input
+                 onChange={(e)=> setInfo({...info, ownerNames: e.target.value})}
+                 className='px-3 w-[150px] border-[1px]  outline-none py-1'
                 type="text" placeholder='Owner Name' />
-                <input className='px-3 ml-4 border-[1px] w-full outline-none py-1'
+                <input
+                 onChange={(e)=> setInfo({...info, ownerEmail: e.target.value})}
+                 className='px-3 ml-4 border-[1px] w-full outline-none py-1'
                 type="text" placeholder='Restaurant owner Email' />
             </div>
         </div>

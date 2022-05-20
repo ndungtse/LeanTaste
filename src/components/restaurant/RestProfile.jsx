@@ -7,7 +7,7 @@ import Reg3 from "./reg3";
 function RestProfile() {
   const [step, setStep]= useState(1)
   const [info, setInfo] = useState({
-      name: '', category: '', completeName: '', ownerEmail: '',
+      name: '', category: 'Restaurant', completeName: '', ownerEmail: '',
       phone: '', ownerNames: '', ownerPhoneNumber: '', email: '',
       closingHour: '', openingHour: '', address: '' 
   })
@@ -64,7 +64,7 @@ function RestProfile() {
         </div>
         {step ===1 && <Reg1 info={info} setInfo={setInfo} />}
         {step ===2 && <Reg2 info={info} setInfo={setInfo} />}
-        {step ===3 && <Reg3/>}
+        {step ===3 &&( <Reg3/> )}
       </div>
     </>
   );
