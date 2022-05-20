@@ -27,7 +27,9 @@ function SideBar({active}) {
         <p>Lean</p> <span className="text-[#0B6041]">Taste</span>
       </h1>
       <div className="flex flex-col w-full items-center px-3 text-white">
-        <Link to='/' className="flex cursor-pointer mt-6 mx-auto items-center w-full rounded-lg p-2 hover:bg-[#0B6041]">
+        <Link to='/dashboard/overview'
+         className={`${active==='overview' && 'bg-[#0B6041]'}
+         flex cursor-pointer mt-6 mx-auto items-center w-full rounded-lg p-2 hover:bg-[#0B6041]`}>
           <BiGridAlt />
           <p className="ml-6">Overview</p>
         </Link>

@@ -2,17 +2,15 @@ import react from "react";
 import SideBar from "../SideBar";
 import { ImSearch } from "react-icons/im";
 import { IoIosNotifications } from "react-icons/io";
-// import ProfilePic from "../../img/Ellipse18.png";
 import Graph from "./graph";
-// import { BiMessageAltAdd } from "react-icons/bi";
 import { BiCircle } from "react-icons/bi";
 // import {FaCircle} from "react-icons/fa"
 
 const Dashboard = () => {
   return (
-    <div className="w-full fixed" >
+    <div className="w-full fixed">
       <div className="flex flex-row  ">
-        <SideBar />
+        <SideBar active={`overview`} />
         <div className="flex flex-col h-screen  w-full overflow-y-auto ">
           <div className="flex  w-full justify-between px-4 pt-4">
             <p className="font-semibold ml-10 font ">Overview</p>
@@ -20,7 +18,6 @@ const Dashboard = () => {
               <ImSearch className="mt-4 mx-1" />
               <IoIosNotifications className="mt-4 mx-3" />
               {<p className="mt-3 mx-3 font-bold">Kagabo Jacques</p>}
-            
             </div>
           </div>
           <div className="flex flex-row  pl-20">
@@ -46,7 +43,7 @@ const Dashboard = () => {
                 </div>
                 <div className="">
                   { <Graph /> }
-                </div>
+                  </div>
               </div>
             </div>
             <div className="flex flex-col bg-white  rounded-lg w-2/6 border-[1px]  m-3 border-solid border-gray-200">
@@ -151,21 +148,32 @@ const Dashboard = () => {
                   </div>
                 </div>
                 <div className="flex flex-col">
-                  <div className="text-blue-200 font-light text-left pl-10 py-5"> Create New</div>
+                  <div className="text-blue-200 font-light text-left pl-10 py-5">
+                    {" "}
+                    Create New
+                  </div>
                 </div>
                 <div className="flex flex-row justify-between m-5">
                   <div className="ml-10">Restaurants</div>
-                  <button className="bg-green-800 text-white rounded-full mr-10 w-14">New</button>
+                  <button className="bg-green-800 text-white rounded-full mr-10 w-14">
+                    New
+                  </button>
                 </div>
                 <div className="flex flex-row items-center justify-between m-5">
-                  <div className="flex items-center ml-3">< BiCircle className="mr-2"/>Restaurants</div>
-                  <button className="bg-green-800 text-white rounded-full mr-10 w-14">New</button>
+                  <div className="flex items-center ml-3">
+                    <BiCircle className="mr-2" />
+                    Restaurants
+                  </div>
+                  <button className="bg-green-800 text-white rounded-full mr-10 w-14">
+                    New
+                  </button>
                 </div>
                 <div className="flex flex-row justify-between m-5">
                   <div className="ml-10">Restaurants</div>
-                  <button className="bg-green-800 text-white rounded-full mr-10 w-14">New</button>
+                  <button className="bg-green-800 text-white rounded-full mr-10 w-14">
+                    New
+                  </button>
                 </div>
-                
               </div>
             </div>
           </div>

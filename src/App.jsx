@@ -11,6 +11,7 @@ import ClientReg from './components/client/ClientReg';
 import { useApp } from './components/contexts/AppContext'
 import NotFound from './components/NotFound';
 import Cli from './components/client/CLient';
+import Dashboard from './components/chart/chart';
 
 function App() {
   const { isLoggedIn } = useApp()
@@ -27,6 +28,8 @@ function App() {
           isLoggedIn?<Menu/>: <Navigate replace to='/login' />} />
           <Route path='/dashboard/clients' element={
           isLoggedIn?<Cli />: <Navigate replace to='/login' />} />
+          <Route path='/dashboard/overview' element={
+          isLoggedIn?<Dashboard />: <Navigate replace to='/login' />} />
           <Route path='/signup' element={<Logs />} />
           <Route path='/login' element={<Login />} />
           <Route path='/regclient' element={<ClientReg />} />
