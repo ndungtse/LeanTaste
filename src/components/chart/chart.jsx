@@ -3,7 +3,7 @@ import SideBar from "../SideBar";
 import { ImSearch } from "react-icons/im";
 import { IoIosNotifications } from "react-icons/io";
 // import ProfilePic from "../../img/Ellipse18.png";
-// import Graph from "./graph";
+import Graph from "./graph";
 // import { BiMessageAltAdd } from "react-icons/bi";
 import { BiCircle } from "react-icons/bi";
 // import {FaCircle} from "react-icons/fa"
@@ -20,20 +20,20 @@ const Dashboard = () => {
               <ImSearch className="mt-4 mx-1" />
               <IoIosNotifications className="mt-4 mx-3" />
               {<p className="mt-3 mx-3 font-bold">Kagabo Jacques</p>}
-              {/* {<img className=" h-12" src={ProfilePic} />} */}
+            
             </div>
           </div>
           <div className="flex flex-row  pl-20">
-            <div className="flex flex-col w-1/6 h-20 justify-center mx-1 mt-4 border-2 rounded-md border-solid border-gray-200">
-              <p className="font-bold">Clients</p>
-              <p className="font-bold">2345</p>6
-            </div>
-            <div className="flex flex-col w-1/6 h-20 justify-center mx-1 mt-4 border-2   rounded-md border-solid bg-green-800">
+            <div className="flex flex-col w-1/6 h-20 px-20 py-3 mx-1 mt-4 border-2 rounded-md border-solid border-gray-200">
               <p className="font-bold">Clients</p>
               <p className="font-bold">2345</p>
             </div>
-            <div className="flex flex-col w-1/6 h-20 justify-center mx-1   mt-4 border-2 rounded-md border-solid border-gray-200">
+            <div className="flex flex-col w-1/6 h-20  px-20 justify-center mx-1 mt-4 border-2   rounded-md border-solid bg-green-800">
               <p className="font-bold">Clients</p>
+              <p className="font-bold">2345</p>
+            </div>
+            <div className="flex flex-col w-1/6 h-20  px-20 justify-center mx-1  mt-4 border-2 rounded-md border-solid border-gray-200">
+              <p className="font-bold mx-auto w-fit">Clients</p>
               <p className="font-bold">2345</p>
             </div>
           </div>
@@ -45,7 +45,7 @@ const Dashboard = () => {
                   <p className="text-blue-200">25th May 2022</p>
                 </div>
                 <div className="">
-                  {/* <Graph /> */}
+                  { <Graph /> }
                 </div>
               </div>
             </div>
@@ -60,16 +60,16 @@ const Dashboard = () => {
               </div>
               <div className="flex flex-col  h-1/4 p-4 justify center border-b-[1px]  border-solid border-gray-200">
                 <p className="font-bold text-gray-200">Clients</p>
-                <p className="font-bold">56</p>
+                <p className="font-bold">234</p>
               </div>
               <div className="flex flex-col h-1/4 p-4 justify center  border-b-[1px]    border-solid border-gray-200">
                 <p className="font-bold text-gray-200">Clients</p>
-                <p className="font-bold">56</p>
+                <p className="font-bold">67</p>
               </div>
             </div>
           </div>
           <div className="flex flex-row px-20 pt-5 h-50 ">
-            <div className="grid grid-cols-2   gap-4  pt-5 bg-white w-4/6 border-[1px] m-3  rounded-lg border-solid border-gray-200">
+            <div className="grid grid-cols-2   gap-4  pt-5 bg-white w-4/6 border-[1px] m-3  ">
               <div className=" flex flex-col w-100  h-40 border-[1px] border-solid border-gray-400 rounded-lg">
                 <div className="flex flex-col px-5 pt-2 border-b-[1px] border-solid border-gray-200 ">
                   <div className="flex flex-row py-2">
@@ -87,7 +87,7 @@ const Dashboard = () => {
                   <p className="flex">Sole luna </p>
                 </div>
               </div>
-              <div className=" flex flex-col w-100 ">
+              <div className=" flex flex-col w-100  rounded-lg border-solid border-gray-200">
                 <div className="flex flex-col px-5 pt-2  pb-2 border-b-[1px] border-solid border-gray-200 ">
                   <div className="flex flex-row py-2">
                     <div className="w-1/2  ">
