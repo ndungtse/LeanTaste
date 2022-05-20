@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./second-form.css";
 import food from "./images/food.png";
 import { api } from "../contexts/AppContext";
+import { Link } from "react-router-dom";
 
 function Login() {
   const [info, setInfo] = useState({
@@ -76,7 +77,7 @@ function Login() {
                     Login
                   </button>
                   <p>
-                    Don't have an account? <strong>Sign</strong>
+                    Don't have an account? <Link to='/signup'>Sign Up</Link>
                   </p>
                 </form>
               </div>
