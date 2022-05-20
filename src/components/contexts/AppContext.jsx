@@ -41,10 +41,10 @@ export default function AppProvider ({children}){
         setOrders(data.content)
     }
 
-    useEffect(()=>{
-        getOrders();
-        getMenus();
-    },[])
+    // useEffect(()=>{
+    //     getOrders();
+    //     getMenus();
+    // },[])
 
     return(
         <AppContext.Provider value={{orders, menus}}>

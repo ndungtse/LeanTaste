@@ -2,13 +2,13 @@ import react from "react";
 import SideBar from "../SideBar";
 import { ImSearch } from "react-icons/im";
 import { IoIosNotifications } from "react-icons/io";
-import ProfilePic from "../../img/Ellipse18.png";
-import Graph from "./graph";
+// import ProfilePic from "../../img/Ellipse18.png";
+// import Graph from "./graph";
 // import { BiMessageAltAdd } from "react-icons/bi";
 import { BiCircle } from "react-icons/bi";
 // import {FaCircle} from "react-icons/fa"
 
-const dashboard = () => {
+const Dashboard = () => {
   return (
     <div className="w-full fixed" >
       <div className="flex flex-row  ">
@@ -20,7 +20,7 @@ const dashboard = () => {
               <ImSearch className="mt-4 mx-1" />
               <IoIosNotifications className="mt-4 mx-3" />
               {<p className="mt-3 mx-3 font-bold">Kagabo Jacques</p>}
-              {<img className=" h-12" src={ProfilePic} />}
+              {/* {<img className=" h-12" src={ProfilePic} />} */}
             </div>
           </div>
           <div className="flex flex-row  pl-20">
@@ -45,7 +45,7 @@ const dashboard = () => {
                   <p className="text-blue-200">25th May 2022</p>
                 </div>
                 <div className="">
-                  <Graph />
+                  {/* <Graph /> */}
                 </div>
               </div>
             </div>
@@ -175,4 +175,4 @@ const dashboard = () => {
   );
 };
 
-export default dashboard;
+export default Dashboard;
