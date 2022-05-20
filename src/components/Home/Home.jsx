@@ -26,7 +26,7 @@ function Home() {
              to='/signup'>Register</Link>
             <Link
                 className='py-3 hover:bg-green-800  ml-4 px-[7%] border-white rounded-lg border-2'
-             to='/signup'> Already registered? Signin</Link>
+             to='/login'> Already registered? Signin</Link>
         </div>
         <h1 className="text-3xl text-center mt-3">How it works</h1>
         <div className="grid card grid-cols-3  gap-4 px-[5%] mt-2">
