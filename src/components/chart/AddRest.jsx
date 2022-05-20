@@ -1,5 +1,5 @@
 import React from "react";
-import { BiCircle } from "react-icons/bi";
+import { BiCircle, BiCheckCircle } from "react-icons/bi";
 
 function AddRest() {
   return (
@@ -18,26 +18,74 @@ function AddRest() {
             Create New
           </div>
         </div>
-        <div className="flex flex-row justify-between m-5">
-          <div className="ml-10">Restaurants</div>
-          <button className="bg-green-800 text-white rounded-full mr-10 w-14">
-            New
-          </button>
-        </div>
-        <div className="flex flex-row items-center justify-between m-5">
-          <div className="flex items-center ml-3">
-            <BiCircle className="mr-2" />
-            Restaurants
+        <div className="flex w-full border-2 items-center justify-between p-3">
+          <div className="flex items-center">
+            <input
+              className="  clickable "
+              type="radio"
+              name="restaurant"
+              id="rest"
+            />
+            <label
+              className="label4 rounded-full border-2 border-gray-500"
+              htmlFor="rest"
+            >
+              <BiCheckCircle className="text-white label4 cursor-pointer rounded-full text-2xl" />
+            </label>
+            <p className="font-semibold ml-3">Restaurants</p>
           </div>
-          <button className="bg-green-800 text-white rounded-full mr-10 w-14">
+          <div
+            className="flex items-center
+                  rounded-md text-white justify-center bg-[#0B6041] py-1 px-3"
+          >
             New
-          </button>
+          </div>
         </div>
-        <div className="flex flex-row justify-between m-5">
-          <div className="ml-10">Restaurants</div>
-          <button className="bg-green-800 text-white rounded-full mr-10 w-14">
+        <div className="flex w-full border-2 items-center justify-between p-3">
+          <div className="flex items-center">
+            <input
+              className="  clickable "
+              type="radio"
+              name="restaurant"
+              id="rest1"
+            />
+            <label
+              className="label4 rounded-full border-2 border-gray-500"
+              htmlFor="rest1"
+            >
+              <BiCheckCircle className="text-white label4 cursor-pointer rounded-full text-2xl" />
+            </label>
+            <p className="font-semibold ml-3">Hotel</p>
+          </div>
+          <div
+            className="flex items-center
+                  rounded-md text-white justify-center bg-[#0B6041] py-1 px-3"
+          >
             New
-          </button>
+          </div>
+        </div>
+        <div className="flex w-full border-2 items-center justify-between p-3">
+          <div className="flex items-center">
+            <input
+              className="  clickable "
+              type="radio"
+              name="restaurant"
+              id="rest2"
+            />
+            <label
+              className="label4 rounded-full border-2 border-gray-500"
+              htmlFor="rest2"
+            >
+              <BiCheckCircle className="text-white label4 cursor-pointer rounded-full text-2xl" />
+            </label>
+            <p className="font-semibold ml-3">Pub</p>
+          </div>
+          <div
+            className="flex items-center
+                  rounded-md text-white justify-center bg-[#0B6041] py-1 px-3"
+          >
+            New
+          </div>
         </div>
       </div>
     </div>

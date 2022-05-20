@@ -33,7 +33,7 @@ const Dashboard = () => {
               <p className="font-bold">2345</p>
             </div>
           </div>
-          <div className="flex flex-row px-20 pt-5 h-50">
+          <div className="flex flex-row px-[2%] pt-5 h-50">
             <div className="flex flex-row bg-white w-4/6 border-[1px] m-3  rounded-lg border-solid border-gray-200">
               <div className="flex flex-col ">
                 <div className="flex flex-col text-left pb-8 mr-10 pl-10 pt-4 ">
