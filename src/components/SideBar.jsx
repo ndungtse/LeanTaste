@@ -4,10 +4,13 @@ import {
   BiCog,
   BiGrid,
   BiGridAlt,
+  BiGroup,
   BiMenu,
   BiTable,
   BiUser,
+  BiUserCircle,
 } from "react-icons/bi";
+import { FaUsers } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 function SideBar({active}) {
@@ -37,10 +40,20 @@ function SideBar({active}) {
           <BiCart />
           <p className="ml-6">Orders</p>
         </Link>
+        <Link to='/dashboard/clients' className={`${active==='clients' && 'bg-[#0B6041]'}
+        flex cursor-pointer mt-6 mx-auto items-center w-full rounded-lg p-2 hover:bg-[#0B6041]`}>
+          <BiGroup />
+          <p className="ml-6">Clients</p>
+        </Link>
+        <Link to='/dashboard/order' className={`${active==='users' && 'bg-[#0B6041]'}
+        flex cursor-pointer mt-6 mx-auto items-center w-full rounded-lg p-2 hover:bg-[#0B6041]`}>
+          <FaUsers />
+          <p className="ml-6">Orders</p>
+        </Link>
         <Link to='/dashboard/menu' className={`${active==='menu' && 'bg-[#0B6041]'}
         flex cursor-pointer mt-6 mx-auto items-center w-full rounded-lg p-2 hover:bg-[#0B6041]`}>
           <BiMenu />
-          <p className="ml-6">Menu</p>
+          <p className="ml-6">Users</p>
         </Link>
       </div>
       <div className="flex flex-col w-full items-center px-3 text-white">

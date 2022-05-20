@@ -9,3 +9,157 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.header{
+  height:61em;
+  width:14em;
+  background-color: black;
+}
+.header p.leantaste{
+   color:white;
+   text-align:center;
+   padding-top:12px;
+   font-size:18px;
+}
+.header p.leantaste>span{
+  color:#0B6041;
+}
+
+.middle-leantaste p{
+  color:white;
+  margin-left:2em;
+  margin-top:1em;
+}
+
+.last-leantaste p{
+  color:white;
+  margin-left:2em;
+  position:relative;
+  top:8em;
+  padding-top:1em;
+}
+
+/* header below */
+div.header-below{
+  margin-top:10em;
+  margin-left:0.5em;
+  height:35.7em;
+  width:13.5em;
+  background-color:#0B6041;
+}
+div.App{
+  background-color:#E7E4E8;
+}
+
+.holder{
+  background-color:#E7E4E8;
+  display:flex;  
+}
+div.container p{
+  font-size:1em;
+}
+div.container p.overv{
+padding-left:3em;
+}
+div.container p.client{
+  color:black;
+  padding-left:18em;
+  padding-top:5em;
+}
+div.container p.jack{
+color:black;
+position:relative;
+left:62em;
+margin-top:1em;
+}
+p.mypara{
+  margin-left:2em;
+}
+p.mypa{
+ display:inline;
+ position:relative;
+ left:65em;
+ padding-left:4em;
+ 
+}
+
+div.container input{
+  height:20px;
+  width:35em;
+  border:solid #E7E4E8;
+  border-bottom:solid #BAB4B4;
+  background-color:#E7E4E8;
+ margin-left:21em;
+ padding-top:5px;
+}
+div.container input::placeholder{
+  color:#BAB4B4;
+}
+div.container input:focus{
+  outline:none;
+
+}
+.icon,.iconn{
+  padding-right:2em;
+}
+img.img{
+  height:40px;
+  width:30px;
+  border:solid #BAB4B4 ;
+  border-radius:50%;
+}
+
+
+
+
+.report{
+   display: flex;
+   margin-left:2em;
+}
+p.clien, p.sal,p.report,p.cat{
+  display: inline;
+}
+p.clien{
+   padding-left:3em;
+}
+p.sal{
+  padding-left:20em;
+}
+p.report{
+  padding-left:15em;
+}
+p.cat{
+  padding-left:12em;  
+}
+.headtittles{
+  padding-top:2em;
+}
+.records{
+  padding-top:1em;
+}
+.record1{
+  padding-top:1em;
+  padding-left:16em;
+}
+.record2{
+  padding-top:1em;
+  padding-left:18em;
+}
+.record3{
+  padding-top:1em;
+  padding-left:15.6em; 
+}
+.record3 button{
+  height:2em;
+  width:5em;
+  border-radius:0.4em;
+  background-color:#C4C4C4;
+  border:solid #C4C4C4;
+  color:white;
+
+}
+.color{
+  color:#C4C4C4;
+  padding-top:0.5em;
+}

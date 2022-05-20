@@ -10,6 +10,7 @@ import Home from './components/Home/Home';
 import ClientReg from './components/client/ClientReg';
 import { useApp } from './components/contexts/AppContext'
 import NotFound from './components/NotFound';
+import Cli from './components/client/CLient';
 
 function App() {
   const { isLoggedIn } = useApp()
@@ -24,6 +25,8 @@ function App() {
            isLoggedIn?<Orders />: <Navigate replace to='/login' />} />
           <Route path='/dashboard/menu' element={
           isLoggedIn?<Menu/>: <Navigate replace to='/login' />} />
+          <Route path='/dashboard/clients' element={
+          isLoggedIn?<Cli />: <Navigate replace to='/login' />} />
           <Route path='/signup' element={<Logs />} />
           <Route path='/login' element={<Login />} />
           <Route path='/regclient' element={<ClientReg />} />
