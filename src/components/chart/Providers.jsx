@@ -1,16 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { api } from "../contexts/AppContext";
+import { useRest } from "../contexts/RestContexts";
 
-function Providers({cat}) {
-
-    const getProviders = async()=>{
-        const res = await api.get('/service-providers')
-        const pros = await res.data.content
-        console.log(pros);
-    }
+function ProvCard({cat}) {
+    const [provider, setProvider]= useState({})
+    const { providers } = useRest()
+    console.log(providers);
 
     useEffect(()=>{
-        getProviders();
     },[])
 
   return (
@@ -34,4 +31,4 @@ function Providers({cat}) {
   );
 }
 
-export default Providers;
+export default ProvCard;

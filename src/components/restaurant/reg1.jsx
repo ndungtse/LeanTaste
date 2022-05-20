@@ -1,16 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-function Reg1() {
+function Reg1({info, setInfo}) {
+    
   return (
     <div className='w-[60%] flex flex-col items-center p-[3%]'>
         <div className="flex flex-col py-[5%] px-[6%] border-2">
             <h1 className="font-semibold text-left mt-4">Restaurant Information</h1>
             <input 
+             onChange={(e)=> setInfo({...info, name: e.target.value})}
             className='px-3 mt-4 border-[1px] w-full outline-none py-1'
             type="text" placeholder='Restaurant Name' />
             <input 
             className='px-3 border-[1px] mt-4 w-full outline-none py-1'
             type="text" placeholder='Restaurant Complete Name' />
+            <input 
+            className='px-3 border-[1px] mt-4 w-full outline-none py-1'
+            type="text" placeholder='Restaurant Address' />
             <h1 className="font-semibold text-left mt-4">Contacts number of Restaurant</h1>
             <div className="flex px-2 border-[1px] mt-2 items-center">
                 <p>250</p>

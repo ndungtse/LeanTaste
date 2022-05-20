@@ -15,7 +15,6 @@ import Dashboard from './components/chart/chart';
 
 function App() {
   const { isLoggedIn } = useApp()
-  console.log(isLoggedIn);
 
   return (
     <div className="App">

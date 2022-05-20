@@ -6,6 +6,11 @@ import Reg3 from "./reg3";
 
 function RestProfile() {
   const [step, setStep]= useState(1)
+  const [info, setInfo] = useState({
+      name: '', category: '', completeName: '', ownerEmail: '',
+      phone: '', ownerNames: '', ownerPhoneNumber: '', email: '',
+      closingHour: '', openingHour: '', address: '' 
+  })
   
   return (
     <>
@@ -57,9 +62,9 @@ function RestProfile() {
             </div>
           </div>
         </div>
-        {step ===1 && <Reg1 />}
-        {step ===2 && <Reg2 />}
-        {step ===3 && <Reg3 />}
+        {step ===1 && <Reg1 info={info} setInfo={setInfo} />}
+        {step ===2 && <Reg2 info={info} setInfo={setInfo} />}
+        {step ===3 && <Reg3/>}
       </div>
     </>
   );

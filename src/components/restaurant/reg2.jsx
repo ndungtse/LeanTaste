@@ -11,6 +11,8 @@ function Reg2() {
           <option value="" disabled selected hidden>
             Restaurant
           </option>
+          <option value="motel">Motel</option>
+          <option value="Hotel">Hotel</option>
         </select>
         <select className="border-2 h-12 px-3 mt-4 w-full outline-none">
           <option value="" disabled selected hidden>

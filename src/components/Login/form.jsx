@@ -44,7 +44,7 @@ const Form = () => {
                   <h3>SIGNUP</h3>
                   FirstName
                   <input
-                    onClick={(e) =>
+                    onChange={(e) =>
                       setInfo({ ...info, firstName: e.target.value })
                     }
                     className="px-3 focus:border-2 border-green-800
@@ -55,7 +55,7 @@ const Form = () => {
                   <br />
                   LastName
                   <input
-                    onClick={(e) =>
+                    onChange={(e) =>
                       setInfo({ ...info, lastName: e.target.value })
                     }
                     className="px-3 focus:border-2 border-green-800
@@ -67,7 +67,7 @@ const Form = () => {
                   E-mail
                   <br></br>
                   <input
-                    onClick={(e) => setInfo({ ...info, email: e.target.value })}
+                    onChange={(e) => setInfo({ ...info, email: e.target.value })}
                     className="px-3 focus:border-2 border-green-800
                    outline-none"
                     type="text"
@@ -77,7 +77,7 @@ const Form = () => {
                   phone
                   <br />
                   <input
-                    onClick={(e) =>
+                    onChange={(e) =>
                       setInfo({ ...info, mobile: e.target.value })
                     }
                     className="px-3 focus:border-2 border-green-800
@@ -88,7 +88,7 @@ const Form = () => {
                   <br />
                   Password
                   <input
-                    onClick={(e) =>
+                    onChange={(e) =>
                       setInfo({ ...info, password: e.target.value })
                     }
                     className="px-3 focus:border-2 border-green-800

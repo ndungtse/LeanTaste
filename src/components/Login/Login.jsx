@@ -44,7 +44,7 @@ function Login() {
                 <form action="" className="si-form" onSubmit={login}>
                   E-mail
                   <input
-                    onClick={(e) => setInfo({ ...info, login: e.target.value })}
+                    onChange={(e) => setInfo({ ...info, login: e.target.value })}
                     className="px-3 focus:border-green-800 outline-none"
                     type="text"
                     name="email"
@@ -52,7 +52,7 @@ function Login() {
                   <br />
                   Password
                   <input
-                    onClick={(e) =>
+                    onChange={(e) =>
                       setInfo({ ...info, password: e.target.value })
                     }
                     className="px-3 focus:border-green-800 outline-none"
