@@ -8,6 +8,7 @@ import {
   BiUser,
 } from "react-icons/bi";
 import Row from "./Row";
+import { Link } from "react-router-dom";
 
 function Cli() {
   return (
@@ -35,7 +36,9 @@ function Cli() {
               type="text"
               placeholder="Add a new client"
             />
-            <BiPlus className="p-1 text-3xl bg-slate-200 rounded-full cursor-pointer ml-2"/>
+            <Link to='/regclient'>
+            <BiPlus className="p-1 text-3xl bg-slate-200 rounded-full cursor-pointer ml-2" />
+            </Link>
           </div>
         </div>
         <div className="flex flex-col mt-8 w-full">
@@ -47,13 +50,17 @@ function Cli() {
             </div>
           </div>
           <table className="w-full mt-9">
-            <tr>
-              <th>CLient details</th>
-              <th>Sales</th>
-              <th>Detailed report</th>
-              <th>Category</th>
-            </tr>
-            <Row />
+            <thead>
+              <tr>
+                <th>CLient details</th>
+                <th>Sales</th>
+                <th>Detailed report</th>
+                <th>Category</th>
+              </tr>
+            </thead>
+            <tbody>
+              <Row />
+            </tbody>
           </table>
         </div>
       </div>

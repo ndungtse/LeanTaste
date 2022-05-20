@@ -33,7 +33,7 @@ function SideBar({active}) {
           <BiGridAlt />
           <p className="ml-6">Overview</p>
         </Link>
-        <Link to='/' className="flex cursor-pointer mt-6 mx-auto items-center w-full rounded-lg p-2 hover:bg-[#0B6041]">
+        <Link to='' className="flex cursor-pointer mt-6 mx-auto items-center w-full rounded-lg p-2 hover:bg-[#0B6041]">
           <BiTable />
           <p className="ml-6">Table</p>
         </Link>
@@ -47,7 +47,7 @@ function SideBar({active}) {
           <BiGroup />
           <p className="ml-6">Clients</p>
         </Link>
-        <Link to='/dashboard/order' className={`${active==='users' && 'bg-[#0B6041]'}
+        <Link to='' className={`${active==='users' && 'bg-[#0B6041]'}
         flex cursor-pointer mt-6 mx-auto items-center w-full rounded-lg p-2 hover:bg-[#0B6041]`}>
           <FaUsers />
           <p className="ml-6">Users</p>

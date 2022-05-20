@@ -13,7 +13,7 @@ function ClientReg() {
       <div className="flex flex-col mt-4">
         <label className=" ml-1 font-semibold" htmlFor="">Client</label>
         <input
-          className="outline-none nput mt-2 border-b-2 border-gray-500"
+          className="outline-none bg-transparent nput mt-2 border-b-2 border-gray-500"
           type="text"
           placeholder="Client Name"
         />
@@ -21,7 +21,7 @@ function ClientReg() {
       <div className="flex flex-col mt-4">
         <label className=" ml-1 font-semibold" htmlFor="">Category</label>
         <input
-          className="outline-none nput mt-2 border-b-2 border-gray-500"
+          className="outline-none bg-transparent nput mt-2 border-b-2 border-gray-500"
           type="text"
           placeholder="Choose category"
         />
@@ -29,7 +29,7 @@ function ClientReg() {
       <div className="flex flex-col mt-4">
         <label className=" ml-1 font-semibold" htmlFor="">Presentation</label>
         <input
-          className="outline-none nput mt-2 border-b-2 border-gray-500"
+          className="outline-none bg-transparent nput mt-2 border-b-2 border-gray-500"
           type="text"
           placeholder="Names"
         />
@@ -37,7 +37,7 @@ function ClientReg() {
       <div className="flex flex-col mt-4">
         <label className=" ml-1 font-semibold" htmlFor="">Date of creation</label>
         <input
-          className="outline-none nput mt-2 border-b-2 border-gray-500"
+          className="outline-none bg-transparent nput mt-2 border-b-2 border-gray-500"
           type="text"
           placeholder="Month &amp; yaer"
         />
@@ -45,7 +45,7 @@ function ClientReg() {
       <div className="flex flex-col mt-4">
         <label className=" ml-1 font-semibold" htmlFor="">Address</label>
         <input
-          className="outline-none nput mt-2 border-b-2 border-gray-500"
+          className="outline-none bg-transparent nput mt-2 border-b-2 border-gray-500"
           type="text"
           placeholder="Province, District, Sector, Cell"
         />
@@ -53,7 +53,7 @@ function ClientReg() {
       <div className="flex flex-col mt-4">
         <label className=" ml-1 font-semibold" htmlFor="">Email</label>
         <input
-          className="outline-none nput mt-2 border-b-2 border-gray-500"
+          className="outline-none bg-transparent nput mt-2 border-b-2 border-gray-500"
           type="text"
           placeholder="Email"
         />
@@ -61,7 +61,7 @@ function ClientReg() {
       <div className="flex flex-col mt-4">
         <label className=" ml-1 font-semibold" htmlFor="">Phone</label>
         <input
-          className="outline-none nput mt-2 border-b-2 border-gray-500"
+          className="outline-none bg-transparent nput mt-2 border-b-2 border-gray-500"
           type="text"
           placeholder="Phone"
         />
@@ -69,7 +69,7 @@ function ClientReg() {
       <div className="flex flex-col mt-4">
         <label className=" ml-1 font-semibold" htmlFor="">Bank Account (IBAN)</label>
         <input
-          className="outline-none nput mt-2 border-b-2 border-gray-500"
+          className="outline-none bg-transparent nput mt-2 border-b-2 border-gray-500"
           type="text"
           placeholder="Bank Account"
         />

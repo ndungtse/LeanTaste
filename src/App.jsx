@@ -21,7 +21,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={isLoggedIn?<Navigate replace to='/dashboard/overview' />:<Home />} />
           <Route path='/dashboard/order'element={
            isLoggedIn?<Orders />: <Navigate replace to='/login' />} />
           <Route path='/dashboard/menu' element={
@@ -33,6 +33,7 @@ function App() {
           <Route path='/signup' element={<Logs />} />
           <Route path='/login' element={<Login />} />
           <Route path='/regclient' element={<ClientReg />} />
+          <Route path='/addrestaurant' element={<RestProfile />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

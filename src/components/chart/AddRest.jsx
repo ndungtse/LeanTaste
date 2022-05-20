@@ -1,5 +1,6 @@
 import React from "react";
-import { BiCircle, BiCheckCircle } from "react-icons/bi";
+import { BiCircle, BiCheckCircle, BiPlus } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 function AddRest() {
   return (
@@ -7,7 +8,10 @@ function AddRest() {
       <div className="flex flex-col">
         <div className="flex flex-row justify-between">
           <div className="flex flex-col ml-10 mt-5">
-            <p className="font-bold">Create</p>
+            <p className="font-bold flex">Create 
+            <Link to='/addrestaurant'><BiPlus
+             className="bg-slate-200 text-2xl rounded-xl cursor-pointer ml-2" />
+             </Link></p>
             <p className="font-light text-blue-200">Today</p>
           </div>
           <div className="font-bold  text-green-800 mr-10 mt-5">View All</div>

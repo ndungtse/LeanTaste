@@ -19,15 +19,16 @@ export default function AppProvider({ children }) {
   const [isLoggedIn, setLoggedIn] = useState(undefined);
 
   const user_token = JSON.parse(localStorage.getItem("token"));
-
+console.log(user_token);
   const getSavedUser = () => {
     try {
-      // if (user_token !== null) {
+      if (user_token !== null) {
         const user = jwtDecode(user_token.accessToken);
         setUser(user);
         setLoggedIn(true);
-      // }
-      // setLoggedIn(false)
+        return
+      }
+      setLoggedIn(false)
     } catch (error) {
       console.log(error);
       setLoggedIn(false);
@@ -37,7 +38,7 @@ export default function AppProvider({ children }) {
   };
 
   const getMenus = async () => {
-    // if (user_token !== null) {
+    if (user_token !== null) {
       const res = await fetch(
         "http://196.223.240.154:8099/supapp/api/menu-items",
         {
@@ -50,11 +51,11 @@ export default function AppProvider({ children }) {
       );
       const data = await res.json();
       setMenus(data.content);
-    // }
+    }
   };
 
   const getOrders = async () => {
-    // if (user_token !== null) {
+    if (user_token !== null) {
       const res = await fetch("http://196.223.240.154:8099/supapp/api/orders", {
         method: "GET",
         headers: {
@@ -64,7 +65,7 @@ export default function AppProvider({ children }) {
       });
       const data = await res.json();
       setOrders(data.content);
-    // }
+    }
   };
 
   useEffect(() => {

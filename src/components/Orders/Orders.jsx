@@ -87,17 +87,17 @@ function Orders() {
               className={`w-2/5 scr1 leftorder flex px-3 flex-col items-center
               overflow-auto duration-500 h-[80vh] ${show && "leftshow"}`}
             >
-              <div className="flex flex-col mt-10">
+              <div className="flex flex-col mt-10 items-center">
                 <p className="text-xl">Delivered</p>
-                <h1 className="text-[4em] font-semibold">6</h1>
+                <h1 className="text-[2em] font-semibold">6</h1>
               </div>
-              <div className="flex flex-col mt-10">
+              <div className="flex flex-col mt-10 items-center">
                 <p className="text-xl">Rejected</p>
-                <h1 className="text-[4em] font-semibold">12</h1>
+                <h1 className="text-[2em] font-semibold">12</h1>
               </div>
-              <div className="flex flex-col mt-10">
+              <div className="flex flex-col mt-10 items-center">
                 <p className="text-xl">All</p>
-                <h1 className="text-[4em] font-semibold">18</h1>
+                <h1 className="text-[2em] font-semibold">18</h1>
               </div>
               <AddOrder />
             </div>
