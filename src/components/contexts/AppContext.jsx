@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import axios from 'axios'
+import jwtDecode from 'jwt-decode'
 
 export const api = axios.create({
     baseURL: "http://196.223.240.154:8099/supapp/api"
@@ -12,10 +13,25 @@ export const useApp =()=>{
 }
 
 export default function AppProvider ({children}){
-    const [user, setUser] = useState('')
+    const [user, setUser] = useState(null)
     const [orders, setOrders] = useState([])
     const [menus, setMenus] = useState([])
+    const [isLoggedIn, setLoggedIn] = useState(undefined)
+
     const user_token  = JSON.parse(localStorage.getItem('token'));
+
+
+    const getSavedUser = ()=>{
+        try {
+            const user = jwtDecode(user_token.accessToken)
+            setUser(user)
+            setLoggedIn(true)
+        } catch (error) {
+           console.log(error); 
+           setLoggedIn(false)
+        }
+        
+    }
 
     const getMenus = async()=>{
         const res = await fetch('http://196.223.240.154:8099/supapp/api/menu-items',{
@@ -46,9 +62,13 @@ export default function AppProvider ({children}){
         getMenus();
     },[])
 
+    useEffect(()=>{
+        getSavedUser();
+    },[])
+
     return(
-        <AppContext.Provider value={{orders, menus}}>
-            {children}
+        <AppContext.Provider value={{orders, menus, user, user_token, isLoggedIn}}>
+            {isLoggedIn !==undefined &&children}
         </AppContext.Provider>
     )
 
