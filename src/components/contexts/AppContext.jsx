@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import jwtDecode from "jwt-decode";
+import RestProvider from "./RestContexts";
 
 export const api = axios.create({
   baseURL: "http://196.223.240.154:8099/supapp/api",
@@ -19,7 +20,7 @@ export default function AppProvider({ children }) {
   const [isLoggedIn, setLoggedIn] = useState(undefined);
 
   const user_token = JSON.parse(localStorage.getItem("token"));
-console.log(user_token);
+// console.log(user_token);
   const getSavedUser = () => {
     try {
       if (user_token !== null) {
@@ -70,6 +71,8 @@ console.log(user_token);
 
   useEffect(() => {
     getOrders();
+  }, []);
+  useEffect(() => {
     getMenus();
   }, []);
 
@@ -80,8 +83,9 @@ console.log(user_token);
   return (
     <AppContext.Provider
       value={{ orders, menus, user, user_token, isLoggedIn }}
-    >
+    ><RestProvider>
       {isLoggedIn !== undefined && children}
+      </RestProvider>
     </AppContext.Provider>
   );
 }

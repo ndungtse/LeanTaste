@@ -4,8 +4,14 @@ import { ImSearch } from "react-icons/im";
 import { IoIosNotifications } from "react-icons/io";
 import Graph from "./graph";
 import AddRest from "./AddRest";
+import Providers from "./Providers";
+import { useRest } from "../contexts/RestContexts";
 
 const Dashboard = () => {
+
+  const { proCats } = useRest()
+
+
   return (
     <div className="w-full fixed">
       <div className="flex flex-row  ">
@@ -66,74 +72,9 @@ const Dashboard = () => {
           </div>
           <div className="flex flex-row px-20 pt-5 h-50 ">
             <div className="grid grid-cols-2   gap-4  pt-5 bg-white w-4/6 border-[1px] m-3  ">
-              <div className=" flex flex-col w-100  h-40 border-[1px] border-solid border-gray-400 rounded-lg">
-                <div className="flex flex-col px-5 pt-2 border-b-[1px] border-solid border-gray-200 ">
-                  <div className="flex flex-row py-2">
-                    <div className="w-1/2  ">
-                      <p className="font-bold flex "> Restaurants</p>
-                      <p className="font-light flex text-gray-400">Sales</p>
-                    </div>
-                    <div className=" w-1/2 ">
-                      <p className="text-green-800  font-bold ">View Details</p>
-                    </div>
-                  </div>
-                  <p className="flex ">Sole luna</p>
-                </div>
-                <div className="flex flex-col px-5 pt-2">
-                  <p className="flex">Sole luna </p>
-                </div>
-              </div>
-              <div className=" flex flex-col w-100  rounded-lg border-solid border-gray-200">
-                <div className="flex flex-col px-5 pt-2  pb-2 border-b-[1px] border-solid border-gray-200 ">
-                  <div className="flex flex-row py-2">
-                    <div className="w-1/2  ">
-                      <p className="font-bold flex "> Restaurants</p>
-                      <p className="font-light flex text-gray-400">Sales</p>
-                    </div>
-                    <div className=" w-1/2 ">
-                      <p className="text-green-800  font-bold ">View Details</p>
-                    </div>
-                  </div>
-                  <p className="flex ">Sole luna</p>
-                </div>
-                <div className="flex flex-col px-5 pt-2">
-                  <p className="flex">Sole luna </p>
-                </div>
-              </div>
-              <div className=" flex flex-col w-100  h-40 border-[1px] border-solid border-gray-400 rounded-lg">
-                <div className="flex flex-col px-5 pt-2 border-b-[1px] border-solid border-gray-200 ">
-                  <div className="flex flex-row py-2">
-                    <div className="w-1/2  ">
-                      <p className="font-bold flex "> Restaurants</p>
-                      <p className="font-light flex text-gray-400">Sales</p>
-                    </div>
-                    <div className=" w-1/2 ">
-                      <p className="text-green-800  font-bold ">View Details</p>
-                    </div>
-                  </div>
-                  <p className="flex ">Sole luna</p>
-                </div>
-                <div className="flex flex-col px-5 pt-2">
-                  <p className="flex">Sole luna </p>
-                </div>
-              </div>
-              <div className=" flex flex-col w-100  h-40 border-[1px] border-solid border-gray-400 rounded-lg">
-                <div className="flex flex-col px-5 pt-2 border-b-[1px] border-solid border-gray-200 ">
-                  <div className="flex flex-row py-2">
-                    <div className="w-1/2  ">
-                      <p className="font-bold flex "> Restaurants</p>
-                      <p className="font-light flex text-gray-400">Sales</p>
-                    </div>
-                    <div className=" w-1/2 ">
-                      <p className="text-green-800  font-bold ">View Details</p>
-                    </div>
-                  </div>
-                  <p className="flex ">Sole luna</p>
-                </div>
-                <div className="flex flex-col px-5 pt-2">
-                  <p className="flex">Sole luna </p>
-                </div>
-              </div>
+              {proCats.map((cat, index)=>(
+              <Providers cat={cat} key={index} />
+              ))}
             </div>
             <AddRest />
           </div>
