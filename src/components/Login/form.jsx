@@ -13,14 +13,22 @@ const Form = () => {
     mobile: "",
     password: "",
   });
+  const [status, setStatus] = useState('')
 
   const register = async (e) => {
     e.preventDefault();
     console.log(info);
-    const res = await api.post("/auth/admin/signup", info);
-    console.log(res.data);
-    if (res.data.success === true) {
-      window.location.replace("http://localhost:3000/login");
+    try {
+      const res = await api.post("/auth/admin/signup", info);
+      console.log(res.data);
+      if (res.data.success === true) {
+        window.location.replace("http://localhost:3000/login");
+      }
+    } catch (error) {
+      if (error.response.data.apierror.message) {
+        console.log(error.response.data.apierror.message);
+        setStatus(error.response.data.apierror.message)
+      }
     }
   };
 
@@ -97,6 +105,7 @@ const Form = () => {
                     name="password"
                   />
                   <br />
+                  <p className="mt-3 text-red-500 text-center">{status}</p>
                   <button className="button text-green-800" type="submit">
                     Sign Up
                   </button>
