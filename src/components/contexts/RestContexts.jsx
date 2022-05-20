@@ -11,7 +11,7 @@ export const useRest = () => {
 export default function RestProvider({ children }) {
   const [proCats, setProCats] = useState([]);
   const [providers, setProviders] = useState([]);
-  const [user, setUser]= useState('')
+  const [user, setUser]= useState('');
 
   const user_token = JSON.parse(localStorage.getItem("token"));
 
@@ -24,8 +24,7 @@ export default function RestProvider({ children }) {
           console.log(error);
       }
   },[])
-  
-
+ 
   
 
   const getProCats = async () => {
@@ -37,6 +36,7 @@ export default function RestProvider({ children }) {
     const res = await api.get("/service-providers");
     const pros = await res.data.content;
     setProviders(pros)
+
   };
 
   useEffect(() => {

@@ -1,4 +1,4 @@
-import react from "react";
+import react, { useEffect } from "react";
 import SideBar from "../SideBar";
 import { ImSearch } from "react-icons/im";
 import { IoIosNotifications } from "react-icons/io";
@@ -6,11 +6,26 @@ import Graph from "./graph";
 import AddRest from "./AddRest";
 import { useRest } from "../contexts/RestContexts";
 import ProvCard from "./Providers";
+import { api, useApp } from "../contexts/AppContext";
 
 const Dashboard = () => {
 
+  const { user_token } = useApp()
   const { proCats, user } = useRest()
 
+  const getStats = async()=>{
+    const res = await api.get('/dashboard-stats/service-providers',{
+      headers:{
+        "accessToken": `Bearer ${user_token.accessToken}`,
+        "Authorization": `Bearer ${user_token.accessToken}`,
+      }
+    })
+    console.log(res);
+  }
+
+  useEffect(()=>{
+    getStats()
+  },[])
 
   return (
     <div className="w-full fixed">
@@ -31,11 +46,11 @@ const Dashboard = () => {
               <p className="font-bold">2345</p>
             </div>
             <div className="flex flex-col w-1/6 h-20  px-20 justify-center mx-1 mt-4 border-2   rounded-md border-solid bg-green-800">
-              <p className="font-bold">Clients</p>
+              <p className="font-bold">Revenues(FRW)</p>
               <p className="font-bold">2345</p>
             </div>
             <div className="flex flex-col w-1/6 h-20  px-20 justify-center mx-1  mt-4 border-2 rounded-md border-solid border-gray-200">
-              <p className="font-bold mx-auto w-fit">Clients</p>
+              <p className="font-bold mx-auto w-fit">Orders</p>
               <p className="font-bold">2345</p>
             </div>
           </div>
@@ -53,15 +68,15 @@ const Dashboard = () => {
             </div>
             <div className="flex flex-col bg-white  rounded-lg w-2/6 border-[1px]  m-3 border-solid border-gray-200">
               <div className="flex flex-col h-1/4 p-4 justify center   border-t-[1px] border-b-[1px]   border-solid  border-gray-200 ">
-                <p className="font-bold text-gray-200">Clients</p>
+                <p className="font-bold text-gray-200">Orders</p>
                 <p className="font-bold">56</p>
               </div>
               <div className="flex flex-col h-1/4 p-4 justify center   border-t-[1px] border-b-[1px]   border-solid  border-gray-200">
-                <p className="font-bold text-gray-200">Clients</p>
+                <p className="font-bold text-gray-200">Items</p>
                 <p className="font-bold">56</p>
               </div>
               <div className="flex flex-col  h-1/4 p-4 justify center border-b-[1px]  border-solid border-gray-200">
-                <p className="font-bold text-gray-200">Clients</p>
+                <p className="font-bold text-gray-200">Order/hour</p>
                 <p className="font-bold">234</p>
               </div>
               <div className="flex flex-col h-1/4 p-4 justify center  border-b-[1px]    border-solid border-gray-200">
