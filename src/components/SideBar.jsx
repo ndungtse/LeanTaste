@@ -48,12 +48,12 @@ function SideBar({active}) {
         <Link to='/dashboard/order' className={`${active==='users' && 'bg-[#0B6041]'}
         flex cursor-pointer mt-6 mx-auto items-center w-full rounded-lg p-2 hover:bg-[#0B6041]`}>
           <FaUsers />
-          <p className="ml-6">Orders</p>
+          <p className="ml-6">Users</p>
         </Link>
         <Link to='/dashboard/menu' className={`${active==='menu' && 'bg-[#0B6041]'}
         flex cursor-pointer mt-6 mx-auto items-center w-full rounded-lg p-2 hover:bg-[#0B6041]`}>
           <BiMenu />
-          <p className="ml-6">Users</p>
+          <p className="ml-6">Menu</p>
         </Link>
       </div>
       <div className="flex flex-col w-full items-center px-3 text-white">
