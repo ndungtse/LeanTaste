@@ -15,6 +15,10 @@ function Reg1({info, setInfo}) {
             className='px-3 border-[1px] mt-4 w-full outline-none py-1'
             type="text" placeholder='Restaurant Complete Name' />
             <input 
+            onChange={(e)=> setInfo({...info, email: e.target.value})}
+            className='px-3 border-[1px] mt-4 w-full outline-none py-1'
+            type="text" placeholder='Restaurant Email' />
+            <input 
             onChange={(e)=> setInfo({...info, address: e.target.value})}
             className='px-3 border-[1px] mt-4 w-full outline-none py-1'
             type="text" placeholder='Restaurant Address' />

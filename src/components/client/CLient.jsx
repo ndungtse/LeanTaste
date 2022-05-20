@@ -2,15 +2,17 @@ import React from "react";
 import SideBar from "../SideBar";
 import {
   BiBell,
-  BiDotsHorizontalRounded,
   BiPlus,
   BiSearch,
   BiUser,
 } from "react-icons/bi";
 import Row from "./Row";
 import { Link } from "react-router-dom";
+import { useRest } from "../contexts/RestContexts";
 
 function Cli() {
+  const { user } = useRest()
+
   return (
     <div className="flex fixed w-full h-screen">
       <SideBar active={`clients`} />
@@ -22,7 +24,7 @@ function Cli() {
               <BiSearch className="mr-5" />
               <BiBell className="mr-5" />
             </div>
-            <p className="ml-3">Kagabo Jaques</p>
+            <p className="ml-3">{user.name}</p>
             <BiUser className="ml-3 text-2xl" />
           </div>
         </div>

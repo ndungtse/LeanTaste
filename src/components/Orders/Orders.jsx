@@ -10,10 +10,12 @@ import Order from "./Order";
 import AddOrder from "./AddOrder";
 import "./order.css";
 import { useApp } from "../contexts/AppContext";
+import { useRest } from "../contexts/RestContexts";
 
 function Orders() {
   const [show, setShow] = useState(false);
   const { orders } = useApp();
+  const { user } = useRest()
 
   return (
     <>
@@ -36,7 +38,7 @@ function Orders() {
                 <BiSearch className="mr-5" />
                 <BiBell className="mr-5" />
               </div>
-              <p className="ml-3">Kagabo Jaques</p>
+              <p className="ml-3">{user.name}</p>
               <BiUser className="ml-3 text-2xl" />
             </div>
           </div>

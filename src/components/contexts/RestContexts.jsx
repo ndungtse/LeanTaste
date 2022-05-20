@@ -11,12 +11,25 @@ export const useRest = () => {
 export default function RestProvider({ children }) {
   const [proCats, setProCats] = useState([]);
   const [providers, setProviders] = useState([]);
+  const [user, setUser]= useState('')
 
   const user_token = JSON.parse(localStorage.getItem("token"));
 
+  useEffect(()=>{
+    try {
+        const userinfo = jwtDecode(user_token.accessToken)
+        console.log(userinfo);
+        setUser(userinfo.user) 
+      } catch (error) {
+          console.log(error);
+      }
+  },[])
+  
+
+  
+
   const getProCats = async () => {
     const res = await api.get("service-provider-categories");
-    console.log(res.data.content);
     setProCats(res.data.content);
   };
 
@@ -32,6 +45,6 @@ export default function RestProvider({ children }) {
   }, []);
 
   return (
-    <RestContext.Provider value={{ proCats,providers }}>{children}</RestContext.Provider>
+    <RestContext.Provider value={{ proCats,providers, user }}>{children}</RestContext.Provider>
   );
 }

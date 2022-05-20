@@ -6,11 +6,12 @@ import Image1 from "./images/image1.jpg";
 import SideBar from "../SideBar";
 import "../Orders/order.css";
 import { useApp } from "../contexts/AppContext";
+import { useRest } from "../contexts/RestContexts";
 
 export default function Menu() {
   const [show, setShow] = useState(false);
   const { menus } = useApp();
-  console.log(menus);
+  const { user } = useRest()
 
   return (
     <>
@@ -25,14 +26,14 @@ export default function Menu() {
         <div className="w-full h-full bg-[#F2F5FF]">
           <div
             onClick={() => setShow(false)}
-            className="flex items-center justify-between w-[300px] h-[6vh] absolute right-0 mr-24 mt-10 nav"
+            className="flex items-center justify-between w-[300px] h-[6vh] absolute right-0 mr-10 mt-10 nav"
           >
             <div className="flex mr-4">
               <div className="flex text-2xl items-center border-r-2 border-black">
                 <BiSearch className="mr-5" />
                 <BiBell className="mr-5" />
               </div>
-              <p className="ml-3">Kagabo Jaques</p>
+              <p className="ml-3">{user.name}</p>
               <BiUser className="ml-3 text-4xl" />
             </div>
           </div>

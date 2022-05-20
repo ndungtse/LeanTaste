@@ -1,6 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
+import { api, useApp } from "../contexts/AppContext";
 
 function Reg2({info, setInfo}) {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const { user_token } = useApp()
+  const [status, setStatus] = useState('')
+
+  const AddProfile = async()=>{
+    console.log(info);
+    setIsSubmitting(true)
+    try {
+      const res = await fetch("http://196.223.240.154:8099/supapp/api/service-providers" ,{
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          accessToken: `Bearer ${user_token.accessToken}`,
+          Authorization: `Bearer ${user_token.accessToken}`,
+        },
+        body: JSON.stringify(info)
+      })
+      // console.log(res.response.data);
+      console.log(res);
+      setIsSubmitting(false)
+    } catch (error) {
+      // console.log(error.response.data.apierror.message);
+      // setStatus(error.response.data.apierror.message)
+      console.log(error);
+      setIsSubmitting(false)
+    }
+  }
+
   return (
     <div className="w-[60%] flex flex-col items-center p-[3%]">
       <div className="flex flex-col w-full min-w-[300px] py-[5%] px-[6%] border-2">
@@ -50,8 +79,12 @@ function Reg2({info, setInfo}) {
         <label htmlFor="file" className="w-full border-2 h-10 flex items-center 
         cursor-pointer mt-5 justify-center"
         >Choose Images</label>
+        <p className="mt-3 text-red-600 text-center">{status}</p>
         <button
-        className="px-3 mt-3 text-white py-2 bg-[#0B6041]"
+        onClick={AddProfile}
+        className={` ${isSubmitting?'cursor-not-allowed pointer-events-nne': 'cursor-pointer'}
+        px-3 mt-3 text-white py-2 bg-[#0B6041]`
+      }
         >Add A Profile</button>
       </div>
     </div>

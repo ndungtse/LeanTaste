@@ -9,7 +9,7 @@ import ProvCard from "./Providers";
 
 const Dashboard = () => {
 
-  const { proCats } = useRest()
+  const { proCats, user } = useRest()
 
 
   return (
@@ -22,7 +22,7 @@ const Dashboard = () => {
             <div className="flex flex-row  ">
               <ImSearch className="mt-4 mx-1" />
               <IoIosNotifications className="mt-4 mx-3" />
-              {<p className="mt-3 mx-3 font-bold">Kagabo Jacques</p>}
+              {<p className="mt-3 mx-3 font-bold">{user.name}</p>}
             </div>
           </div>
           <div className="flex flex-row  pl-20">

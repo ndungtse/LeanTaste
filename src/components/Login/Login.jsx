@@ -8,16 +8,27 @@ function Login() {
     login: "",
     password: "",
   });
+  const [status, setStatus] = useState('')
+
 
   const login = async (e) => {
     e.preventDefault();
-    console.log(info);
-    const res = await api.post("/auth/signin", info);
-    console.log(res.data);
-    if (res.data.token) {
-      localStorage.setItem("token", JSON.stringify(res.data.token));
-      window.location.replace("http://localhost:3000");
+    try {
+      const res = await api.post("/auth/signin", info);
+      console.log(res.data);
+      if (res.data.token) {
+        localStorage.setItem("token", JSON.stringify(res.data.token));
+        window.location.replace("http://localhost:3000");
+      }
+    } catch (error) {
+      console.log(error);
+      if (error.response.data.apierror.message) {
+        console.log(error.response.data.apierror.message);
+        setStatus(error.response.data.apierror.message)
+      }
+      
     }
+    
   };
 
   return (
@@ -60,6 +71,7 @@ function Login() {
                     name="password"
                   />
                   <br />
+                  <p className="mt-3 text-red-500 text-center">{status}</p>
                   <button type="submit" className="bg-green-800">
                     Login
                   </button>

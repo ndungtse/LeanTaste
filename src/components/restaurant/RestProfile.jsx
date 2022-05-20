@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BiBell, BiSearch, BiUser } from "react-icons/bi";
+import { Link } from "react-router-dom";
 import Reg1 from "./reg1";
 import Reg2 from "./reg2";
 import Reg3 from "./reg3";
@@ -16,9 +17,11 @@ function RestProfile() {
     <>
       <div className="w-full flex items-center justify-between px-[3%] shadow-md h-[70px] shadow-gray-400">
         <div className="logo">
+          <Link to='/'>
           <p className="text-3xl">
-            Lean<span className="text-orange-500">Taste</span>
+            Lean<span className="text-green-900">Taste</span>
           </p>
+          </Link>
         </div>
         <div className="flex">
           <div className="flex text-2xl items-center border-r-2 border-black">
