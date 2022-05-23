@@ -4,18 +4,21 @@
 }
 
 .main {
-    background-color: #fff;
+    background-color: rgb(35, 44, 40);
     position: absolute;
     height: 100vh;
     width: 100vw;
+
 }
 .child{
     background-color: whitesmoke;
     height: 85vh;
     width: 80%;
-    margin-left: 8%;
+    margin-left: 9%;
   position: relative;
-  margin-top: 3%;
+  margin-top: 4%;
+  border: 2px solid green;
+  border-radius: 7px;
 }
 .double{
     display: flex;
@@ -29,12 +32,13 @@
 form input{
     height: 2.7em;
     margin-bottom: 1.1em;
-    width: 80%;
+    width: 77%;
     margin-top: 3px;
     border: 1px solid rgb(58, 108, 58);
     margin-right: 5em;
     padding: 0 10px;
     outline: none;
+    border-radius: 5px;
 }
 
 .button{
