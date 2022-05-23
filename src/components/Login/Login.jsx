@@ -30,14 +30,14 @@ function Login() {
                 <p className="text-3xl">
                   Lean<span className="text-green-800">Taste</span>
                 </p>
-                <p>Here to eat Enjoy the food</p>
+                <p className="mt-2 text">Here to eat Enjoy the food</p>
 
                 <img src={food} alt="" />
               </div>
 
               <div className="formss">
-                <h3 className="h3 text-lg font-bold text-center">Welcome back!</h3>
-                <p className="p1">Your presence is what we are asking for to make it a memorable one! </p>
+                <h3 className="h3 text-lg font-bold text-center mt-16">Welcome back!</h3>
+                <p className="p1 mt-8">Your presence is what we are asking for to make it a memorable one! </p>
 
                 {/* <p></p> */}
                 <form action="" className="si-form" onSubmit={login}>
@@ -62,7 +62,7 @@ function Login() {
                   <button type="submit" className="bg-green-800 mt-10">
                     Login
                   </button>
-                  <p className="mt-10">
+                  <p className="mt-10 ml-28">
                     Don't have an account? <strong>Sign</strong>
                   </p>
                 </form>
