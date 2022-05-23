@@ -36,16 +36,15 @@ function Login() {
               </div>
 
               <div className="formss">
-                <h3 className="h3">Welcome back</h3>
-                <p className="p1">Your presence is what we are asking for </p>
-                <p className="p2">to make it a memorable one! </p>
+                <h3 className="h3 text-lg font-bold text-center">Welcome back!</h3>
+                <p className="p1">Your presence is what we are asking for to make it a memorable one! </p>
 
                 {/* <p></p> */}
                 <form action="" className="si-form" onSubmit={login}>
                   E-mail
                   <input
                     onClick={(e) => setInfo({ ...info, login: e.target.value })}
-                    className="px-3 focus:border-green-800 outline-none"
+                    className="px-3 focus:border-green-800 outline-none mt-5 rounded-3xl"
                     type="text"
                     name="email"
                   />
@@ -55,15 +54,15 @@ function Login() {
                     onClick={(e) =>
                       setInfo({ ...info, password: e.target.value })
                     }
-                    className="px-3 focus:border-green-800 outline-none"
+                    className="px-3 focus:border-green-800 outline-none mt-5 rounded-3xl"
                     type="password"
                     name="password"
                   />
                   <br />
-                  <button type="submit" className="bg-green-800">
+                  <button type="submit" className="bg-green-800 mt-10">
                     Login
                   </button>
-                  <p>
+                  <p className="mt-10">
                     Don't have an account? <strong>Sign</strong>
                   </p>
                 </form>

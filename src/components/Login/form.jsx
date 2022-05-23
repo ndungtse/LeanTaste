@@ -26,7 +26,6 @@ const Form = () => {
 
   return (
     <div>
-      <div className="parent mx-auto">
         <div className="main">
           <div className="child">
             <div className="double">
@@ -41,7 +40,7 @@ const Form = () => {
 
               <div className="forms">
                 <form action="" onSubmit={register}>
-                  <h3>SIGNUP</h3>
+                  <h3>Sign Up</h3>
                   FirstName
                   <input
                     onClick={(e) =>
@@ -100,12 +99,11 @@ const Form = () => {
                   <button className="button text-green-800" type="submit">
                     Sign Up
                   </button>
-                  <p>
+                  <p className="ml-44 mt-10">
                     Already have an account?{" "}
                     <Link
                       to="/login"
-                      className="text-green-800
-                    "
+                      className="text-green-800"
                     >
                       Login
                     </Link>
@@ -115,7 +113,6 @@ const Form = () => {
             </div>
           </div>
         </div>
-      </div>
     </div>
   );
 };
