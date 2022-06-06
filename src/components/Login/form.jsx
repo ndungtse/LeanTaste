@@ -39,9 +39,10 @@ const Form = () => {
               </div>
 
               <div className="forms">
-                <form action="" onSubmit={register}>
-                  <h3>Sign Up</h3>
-                  FirstName
+                <form action="" className=" h-[90%]"  onSubmit={register}>
+                  <h3 className="text-2xl font-lg">Sign Up</h3>
+                  <div className="w-4/5 flex justify-around">
+                  <h2>Firstname:</h2>
                   <input
                     onClick={(e) =>
                       setInfo({ ...info, firstName: e.target.value })
@@ -51,8 +52,10 @@ const Form = () => {
                     type="text"
                     name="firstname"
                   />
-                  <br />
-                  LastName
+                  </div>
+                  
+                    <div className="w-4/5 flex justify-around">
+                  <h2>LastName</h2>
                   <input
                     onClick={(e) =>
                       setInfo({ ...info, lastName: e.target.value })
@@ -62,9 +65,10 @@ const Form = () => {
                     type="text"
                     name="lastname"
                   />
-                  <br />
-                  E-mail
-                  <br></br>
+                  </div>
+                    <div className="w-4/5 flex justify-around">
+                 <h2>E-mail</h2>
+                 
                   <input
                     onClick={(e) => setInfo({ ...info, email: e.target.value })}
                     className="px-3 focus:border-2 border-green-800
@@ -72,9 +76,10 @@ const Form = () => {
                     type="text"
                     name="email"
                   />
-                  <br />
-                  phone
-                  <br />
+                  </div>
+                    <div className="w-4/5 flex justify-around">
+                  <h2>Phone</h2>
+                  
                   <input
                     onClick={(e) =>
                       setInfo({ ...info, mobile: e.target.value })
@@ -84,8 +89,9 @@ const Form = () => {
                     type="number"
                     name="phone"
                   />
-                  <br />
-                  Password
+                  </div>
+                    <div className="w-4/5 flex justify-around">
+                  <h2>Password</h2>
                   <input
                     onClick={(e) =>
                       setInfo({ ...info, password: e.target.value })
@@ -95,11 +101,11 @@ const Form = () => {
                     type="password"
                     name="password"
                   />
-                  <br />
+                  </div>
                   <button className="button text-green-800" type="submit">
                     Sign Up
                   </button>
-                  <p className="ml-44 mt-10">
+                  <p className="ml-40">
                     Already have an account?{" "}
                     <Link
                       to="/login"

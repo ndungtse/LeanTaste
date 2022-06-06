@@ -26,14 +26,12 @@
     display: flex;
 }
 
-.formss {
+form {
+    /* height: 90%; */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 50%;
-    height: 74vh;
+    justify-content: space-between;
 }
-
 
 form button {
     height: 2.9em;

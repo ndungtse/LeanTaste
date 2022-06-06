@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./second-form.css";
 import food from "./images/food.png";
 import { api } from "../contexts/AppContext";
+import { Link } from 'react-router-dom'
 
 function Login() {
   const [info, setInfo] = useState({
@@ -16,7 +17,7 @@ function Login() {
     console.log(res.data);
     if (res.data.token) {
       localStorage.setItem("token", JSON.stringify(res.data.token));
-      window.location.replace("http://localhost:3000");
+      window.location.replace("http://localhost:3000/dashboard");
     }
   };
 
@@ -63,7 +64,7 @@ function Login() {
                     Login
                   </button>
                   <p className="mt-10 ml-28">
-                    Don't have an account? <strong>Sign</strong>
+                    Don't have an account? <Link to='/signup'>Sign</Link>
                   </p>
                 </form>
               </div>
