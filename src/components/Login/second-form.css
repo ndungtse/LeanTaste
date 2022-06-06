@@ -1,95 +1,78 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-.parents{
-    /* background-color: rgb(1, 15, 4); */
-    height: 96vh;
-    width: 80%;
-    /* margin-left: 3%; */
-    margin: 0 auto;
-    margin-top: 2%;
-}
-.mains{
-    /* background-color: rgb(11, 96, 65, 80%); */
-    position: absolute;
-    height: 86vh;
-   margin-left: 4%;
-   margin-top: 2%;
-    width: 73%;
-}
-.childs{
-    background-color: whitesmoke;
-    height: 74vh;
-    width: 94%;
-    margin-left: 3%;
-  position: absolute;
-  margin-top: 3%;
 
- 
+.mains {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(35, 44, 40);
 }
-.doubles{
+
+.childs {
+    background-color: whitesmoke;
+    height: 85vh;
+    width: 75%;
+    margin-left: 11%;
+    position: absolute;
+    margin-top: 5%;
+    border: 2px solid green;
+    border-radius: 5px;
+
+}
+
+.doubles {
     display: flex;
 }
-.formss{
-    
-    float: right;
+
+form {
+    /* height: 90%; */
     display: flex;
     flex-direction: column;
-    
-    justify-content: center;
-    /* margin-top: %; */
-    
-    width: 50%;
-    height: 74vh;
+    justify-content: space-between;
 }
 
-
-form button{
-    height: 2.8em;
-    width: 90%;
+form button {
+    height: 2.9em;
+    width: 40%;
+    border-radius: 40px;
     background-color: rgb(11, 96, 65, 80%);
     color: white;
-    border: 1px solid rgb(58, 108, 58);;
+    border: 1px solid rgb(58, 108, 58);
 }
-.si-form{
+
+.si-form {
     margin-top: 100px;
 }
 
-h3{
+h3 {
     margin-left: 40%;
-    margin-top: 0%;
-    
 }
-.images{
+
+.images {
     padding-top: 2em;
     width: 48%;
 }
-img{
+
+img {
     height: 60vh;
-    width:26vw;
-   /* position: fixed; */
-    /* margin-left: 3em; */
-   
+    width: 26vw;
 }
-p{
-margin-left: 10em;
-margin-top: 1em;
+
+p {
+    margin-left: 10em;
+    margin-top: 1em;
 
 }
-.images .h3{
+
+.images .h3 {
     margin-left: 10%;
-    margin-top: 1em; 
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+    margin-top: 1em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
-.p2{
-    margin-right: 0%;
-}
-p strong{
-    color: rgb(11, 96, 65, 80%);
-}
-.p2{
 
-    padding-left: 8%;
-    font-family: italic;
+
+p strong {
+    color: rgb(11, 96, 65, 80%);
 }

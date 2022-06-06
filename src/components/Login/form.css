@@ -1,84 +1,76 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-.parent{
-    background-color: black;
-    height: 96vh;
-    width: 80%;
-    margin-left: 3%;
-}
-.main{
-    background-color: rgb(11, 96, 65, 80%);
+
+.main {
+    background-color: rgb(35, 44, 40);
     position: absolute;
-    height: 86vh;
-   margin-left: 4%;
-   margin-top: 2%;
-    width: 73%;
+    height: 100vh;
+    width: 100vw;
+
 }
 .child{
     background-color: whitesmoke;
-    height: 74vh;
-    width: 94%;
-    margin-left: 3%;
-  position: absolute;
-  margin-top: 3%;
-
- 
+    height: 85vh;
+    width: 80%;
+    margin-left: 9%;
+  position: relative;
+  margin-top: 4%;
+  border: 2px solid green;
+  border-radius: 7px;
 }
+
 .double{
     display: flex;
 }
-.forms{
-    /* margin-left: 45%; */
+
+.forms {
     float: right;
-    margin-top: 0%;
     width: 50%;
-   
-   
 }
+
 form input{
-    height: 2.7em;
-    margin-bottom: 1.1em;
-    width: 90%;
+    height: 2.5em;
+    width: 65%;
     border: 1px solid rgb(58, 108, 58);
-    margin-right: 5em;
-    padding: 0 10px;
     outline: none;
+    border-radius: 5px;
 }
+
 .button{
-    height: 2.8em;
-    width: 90%;
-    background-color: rgb(11, 96, 65, 80%);
-    color: white;
-    border: 1px solid rgb(58, 108, 58);;
+    height: 3em;
+    border-radius: 10px;
+    width: 40%;
+    border: 1px solid rgb(58, 108, 58);
+    background-color: rgb(58, 108, 58);
+    margin-left: 8.5rem;
 }
+
 form h3{
     margin-left: 40%;
-    margin-top: 0%;
-    
 }
+
 .image{
     padding-top: 2em;
     width: 48%;
 }
 img{
     height: 60vh;
-    width:26vw;
-   /* position: fixed; */
-    /* margin-left: 3em; */
-   
+    width:26vw; 
 }
+
 p{
 margin-left: 10em;
 margin-top: 1em;
-
 }
+
 .image h3{
     margin-left: 10em;
     margin-top: 1em; 
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
+
 p strong{
     color: rgb(11, 96, 65, 80%);
 }
