@@ -13,7 +13,7 @@ export const useApp = () => {
   return useContext(AppContext);
 };
 
-export default function AppProvider({ children }) {
+export function AppProvider({ children }) {
   const [user, setUser] = useState(null);
   const [orders, setOrders] = useState([]);
   const [menus, setMenus] = useState([]);
