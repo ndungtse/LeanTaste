@@ -28,7 +28,7 @@ export default function RestProvider({ children }) {
   
 
   const getProCats = async () => {
-    const res = await api.get("service-provider-categories");
+    const res = await api.get("/service-provider-categories");
     setProCats(res.data.content);
   };
 
