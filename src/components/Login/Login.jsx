@@ -9,6 +9,8 @@ function Login() {
     login: "",
     password: "",
   });
+  const [status, setStatus] = useState('')
+
 
   const login = async (e) => {
     e.preventDefault();
@@ -19,6 +21,7 @@ function Login() {
       localStorage.setItem("token", JSON.stringify(res.data.token));
       window.location.replace("http://localhost:3000/dashboard");
     }
+    
   };
 
   return (
@@ -52,7 +55,7 @@ function Login() {
                   <br />
                   Password
                   <input
-                    onClick={(e) =>
+                    onChange={(e) =>
                       setInfo({ ...info, password: e.target.value })
                     }
                     className="px-3 focus:border-green-800 outline-none mt-5 rounded-3xl"

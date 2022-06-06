@@ -13,14 +13,22 @@ const Form = () => {
     mobile: "",
     password: "",
   });
+  const [status, setStatus] = useState('')
 
   const register = async (e) => {
     e.preventDefault();
     console.log(info);
-    const res = await api.post("/auth/admin/signup", info);
-    console.log(res.data);
-    if (res.data.success === true) {
-      window.location.replace("http://localhost:3000/login");
+    try {
+      const res = await api.post("/auth/admin/signup", info);
+      console.log(res.data);
+      if (res.data.success === true) {
+        window.location.replace("http://localhost:3000/login");
+      }
+    } catch (error) {
+      if (error.response.data.apierror.message) {
+        console.log(error.response.data.apierror.message);
+        setStatus(error.response.data.apierror.message)
+      }
     }
   };
 
@@ -44,7 +52,7 @@ const Form = () => {
                   <div className="w-4/5 flex justify-around">
                   <h2>Firstname:</h2>
                   <input
-                    onClick={(e) =>
+                    onChange={(e) =>
                       setInfo({ ...info, firstName: e.target.value })
                     }
                     className="px-3 focus:border-2 border-green-800
@@ -57,7 +65,7 @@ const Form = () => {
                     <div className="w-4/5 flex justify-around">
                   <h2>LastName</h2>
                   <input
-                    onClick={(e) =>
+                    onChange={(e) =>
                       setInfo({ ...info, lastName: e.target.value })
                     }
                     className="px-3 focus:border-2 border-green-800
@@ -70,7 +78,7 @@ const Form = () => {
                  <h2>E-mail</h2>
                  
                   <input
-                    onClick={(e) => setInfo({ ...info, email: e.target.value })}
+                    onChange={(e) => setInfo({ ...info, email: e.target.value })}
                     className="px-3 focus:border-2 border-green-800
                    outline-none"
                     type="text"
@@ -81,7 +89,7 @@ const Form = () => {
                   <h2>Phone</h2>
                   
                   <input
-                    onClick={(e) =>
+                    onChange={(e) =>
                       setInfo({ ...info, mobile: e.target.value })
                     }
                     className="px-3 focus:border-2 border-green-800
@@ -93,7 +101,7 @@ const Form = () => {
                     <div className="w-4/5 flex justify-around">
                   <h2>Password</h2>
                   <input
-                    onClick={(e) =>
+                    onChange={(e) =>
                       setInfo({ ...info, password: e.target.value })
                     }
                     className="px-3 focus:border-2 border-green-800

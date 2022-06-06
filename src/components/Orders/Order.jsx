@@ -9,13 +9,13 @@ function Order({order, index}) {
             <p>{order.orderDetails[0].item.name}</p>
             <p>{order.customer.firstName} | x{order.numberOfProducts}</p>
             <div className="flex items-center">
-                Table 8
+            &#9866;Table 8&#9866;
             </div>
         </div>
         <div className="flex flex-col items-start">
-            <h1 className="text-3xl font-semibold">RWF {order.orderDetails[0].item.unitPrice}</h1>
-            <div className="flex items-center">
-                Table 8
+            <h1 className="text-3xl font-semibold text-center">RWF {order.orderDetails[0].item.unitPrice}</h1>
+            <div className="flex items-center text-center">
+            &#9866;Table 8&#9866;
             </div>
             <p>{order.customer.mobile}</p>
         </div>
