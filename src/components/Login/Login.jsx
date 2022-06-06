@@ -19,7 +19,7 @@ function Login() {
     console.log(res.data);
     if (res.data.token) {
       localStorage.setItem("token", JSON.stringify(res.data.token));
-      window.location.replace("http://localhost:3000/dashboard");
+      window.location.replace("http://localhost:3000/dashboard/overview");
     }
     
   };

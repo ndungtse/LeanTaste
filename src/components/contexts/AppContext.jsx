@@ -4,7 +4,7 @@ import jwtDecode from "jwt-decode";
 import RestProvider from "./RestContexts";
 
 export const api = axios.create({
-  baseURL: "http://196.223.240.154:8099/supapp/api",
+  baseURL: "https://backend.supamenu.rw/supapp/api",
 });
 
 const AppContext = React.createContext();
@@ -41,7 +41,7 @@ export function AppProvider({ children }) {
   const getMenus = async () => {
     if (user_token !== null) {
       const res = await fetch(
-        "http://196.223.240.154:8099/supapp/api/menu-items",
+        "https://backend.supamenu.rw/supapp/api/menu-items",
         {
           method: "GET",
           headers: {
@@ -57,7 +57,7 @@ export function AppProvider({ children }) {
 
   const getOrders = async () => {
     if (user_token !== null) {
-      const res = await fetch("http://196.223.240.154:8099/supapp/api/orders", {
+      const res = await fetch("https://backend.supamenu.rw/supapp/api/orders", {
         method: "GET",
         headers: {
           accessToken: `Bearer ${user_token.accessToken}`,

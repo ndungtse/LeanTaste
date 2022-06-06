@@ -74,7 +74,7 @@ function ClientReg() {
           placeholder="Bank Account"
         />
       </div>
-      <button className="px-3 py-1 rounded-md bg-[#0B6041]" type="submit">
+      <button className="px-3 mt-4 py-1 rounded-md bg-[#0B6041]" type="submit">
         Add Client
       </button>
     </form>
