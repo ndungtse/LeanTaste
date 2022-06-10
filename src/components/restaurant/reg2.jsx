@@ -10,12 +10,12 @@ function Reg2({info, setInfo}) {
     console.log(info);
     setIsSubmitting(true)
     try {
-      const res = await fetch("http://196.223.240.154:8099/supapp/api/service-providers" ,{
+      const res = await fetch("https://backend.supamenu.rw/supapp/api/service-providers" ,{
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          accessToken: `Bearer ${user_token.accessToken}`,
-          Authorization: `Bearer ${user_token.accessToken}`,
+          // accessToken: `Bearer ${user_token.accessToken}`,
+          // Authorization: `Bearer ${user_token.accessToken}`,
         },
         body: JSON.stringify(info)
       })
