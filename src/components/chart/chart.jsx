@@ -88,7 +88,7 @@ const Dashboard = () => {
           <div className="flex flex-row px-20 pt-5 h-50 ">
             <div className="grid grid-cols-2   gap-4  pt-5 bg-white w-4/6 border-[1px] m-3  ">
               {proCats.map((cat, index)=>(
-              <ProvCard cat={cat} key={cat.id} />
+              <ProvCard cat={cat} key={-index} />
               ))}
             </div>
             <AddRest />

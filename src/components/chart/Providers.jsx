@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { api } from "../contexts/AppContext";
 import { useRest } from "../contexts/RestContexts";
 
-function ProvCard({cat}) {
+function ProvCard({cat, key}) {
 
     const [relProviders, setRelProviders]= useState([])
     const { providers } = useRest()
@@ -16,7 +16,7 @@ function ProvCard({cat}) {
     },[cat])
 
   return (
-    <div className=" flex flex-col w-100 border-[1px] border-solid border-gray-400 rounded-lg">
+    <div key={key} className=" flex flex-col w-100 border-[1px] border-solid border-gray-400 rounded-lg">
       <div className="flex flex-col px-5 pt-2 ">
         <div className="flex flex-row py-2">
           <div className="w-1/2  ">

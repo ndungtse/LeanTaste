@@ -60,6 +60,7 @@ export function AppProvider({ children }) {
       const res = await fetch("https://backend.supamenu.rw/supapp/api/orders", {
         method: "GET",
         headers: {
+          "Content-Type": "application/json",
           accessToken: `Bearer ${user_token.accessToken}`,
           Authorization: `Bearer ${user_token.accessToken}`,
         },

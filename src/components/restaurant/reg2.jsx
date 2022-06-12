@@ -14,8 +14,8 @@ function Reg2({info, setInfo}) {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          // accessToken: `Bearer ${user_token.accessToken}`,
-          // Authorization: `Bearer ${user_token.accessToken}`,
+          accessToken: `Bearer ${user_token.accessToken}`,
+          Authorization: `Bearer ${user_token.accessToken}`,
         },
         body: JSON.stringify(info)
       })
