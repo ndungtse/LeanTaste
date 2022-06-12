@@ -7,7 +7,7 @@ function Reg2({info, setInfo}) {
   const [status, setStatus] = useState('')
 
   const AddProfile = async()=>{
-    console.log(info);
+    console.log(JSON.stringify(info));
     setIsSubmitting(true)
     try {
       const res = await fetch("https://backend.supamenu.rw/supapp/api/service-providers" ,{
@@ -20,7 +20,8 @@ function Reg2({info, setInfo}) {
         body: JSON.stringify(info)
       })
       // console.log(res.response.data);
-      console.log(res);
+      const data = await res.json()
+      console.log(data);
       setIsSubmitting(false)
     } catch (error) {
       // console.log(error.response.data.apierror.message);

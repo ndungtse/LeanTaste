@@ -48,7 +48,7 @@ function Login() {
 						onSubmit={login}
 						className="rounded-2xl text-xl min-w-[280px] items-center p-4 bg-opacity-10 text- text-black bg-slate-900 flex flex-col w-2/3"
 					>
-						<h1 className="text-2xl">Login</h1>
+						<h1 className="text-2xl font-bold">Login</h1>
 						<p className="text-red-500">{status}</p>
 						<div className="flex flex-col mt-4 w-full px-[2%]">
 							<label htmlFor="">E-mail</label>
@@ -66,10 +66,11 @@ function Login() {
 								className="w-full px-2 outline-none bg-transparent border-2 border-black rounded-xl h-[50px]"
 							/>
 						</div>
-						<div className="flex flex-col mt-6 w-1/2 px-[2%] text-white">
+						<div className="flex flex-col mt-6 w-1/3 min-w-[150px] px-[2%] text-white">
 							<input
 								type="submit"
-								className="w-full cursor-pointer px-2 outline-none bg-green-900 h-[40px]"
+								className="w-full cursor-pointer px-2
+								rounded-xl outline-none bg-green-900 h-[40px]"
 							/>
 						</div>
 						<div className="flex w-full justify-center mt-5">

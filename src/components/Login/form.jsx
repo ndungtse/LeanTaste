@@ -44,7 +44,7 @@ const Form = () => {
 				</div>
 				<div className="flex flex-col w-1/2 h-full items-center justify-center">
           <form onSubmit={register} className="rounded-2xl min-w-[280px] text-xl items-center p-4 bg-opacity-10 text- text-black bg-slate-900 flex flex-col w-2/3">
-              <h1 className="text-2xl">Signup</h1>
+              <h1 className="text-2xl font-bold">Signup</h1>
               <p className="text-red-500">{status}</p>
               <div className="flex flex-col mt-4 w-full px-[2%]">
                 <label htmlFor="">FirstName</label>
@@ -78,7 +78,7 @@ const Form = () => {
                  type="password"  className="w-full px-2 outline-none bg-transparent border-2 border-black rounded-xl h-[45px]" />
               </div>
               <div className="flex flex-col mt-4 w-1/2 px-[2%] text-white">
-                <input type="submit"  className="w-full cursor-pointer px-2 outline-none bg-green-900 h-[45px]" />
+                <input type="submit"  className="w-full cursor-pointer px-2 rounded-xl outline-none bg-green-900 h-[45px]" />
               </div>
               <div className="flex w-full justify-center mt-5">
                 <p>Already have an account?</p>
