@@ -20,7 +20,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={!isLoggedIn?<Navigate replace to='/dashboard/overview' />:<Home />} />
+          <Route path='/' element={isLoggedIn?<Navigate replace to='/dashboard/overview' />:<Home />} />
           <Route path='/dashboard/order'element={
            isLoggedIn?<Orders />: <Navigate replace to='/login' />} />
           <Route path='/dashboard/menu' element={

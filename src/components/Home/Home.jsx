@@ -70,6 +70,10 @@ function Home() {
                              Just make sure you know what you want. This app is available on all platforms whether you
                              are using iPhone or android
                              </p>
+							 <div className="flex mt-5 items-center">
+								<img className="w-[200px]" src="src/images/play.png" alt="" />
+								<img className="w-[160px]" src="src/images/store.svg" alt="" />
+							 </div>
                     </div>
 				</div>
 			</div>
