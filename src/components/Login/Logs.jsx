@@ -5,7 +5,7 @@ import Form from "./form";
 function Logs() {
   return (
     <div className="w-full">
-      <div className="mt-3 mx-auto">
+      <div className=" mx-auto">
         <Form />
       </div>
     </div>
