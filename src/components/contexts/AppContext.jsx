@@ -1,17 +1,55 @@
-import React, { useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import axios from 'axios'
 
-const api = axios.create({
-    baseURL: "196.223.240.154:8099/supapp/api"
+export const api = axios.create({
+    baseURL: "http://196.223.240.154:8099/supapp/api"
 })
 
+const AppContext = React.createContext()
 
-export default function AppProvider (){
+export const useApp =()=>{
+    return useContext(AppContext)
+}
+
+export default function AppProvider ({children}){
     const [user, setUser] = useState('')
-    const user_token  = JSON.parse(localStorage.getItem('user'));
+    const [orders, setOrders] = useState([])
+    const [menus, setMenus] = useState([])
+    const user_token  = JSON.parse(localStorage.getItem('token'));
 
-    const getUser = async()=>{
-        const res = await api.get(`users/${user.id}`)
+    const getMenus = async()=>{
+        const res = await fetch('http://196.223.240.154:8099/supapp/api/menu-items',{
+            method: 'GET',
+            headers: {
+                "accessToken":  `Bearer ${user_token.accessToken}`,
+                'Authorization': `Bearer ${user_token.accessToken}`
+            } ,
+        })
+        const data = await res.json()
+        setMenus(data.content)
     }
+
+    const getOrders = async()=>{
+        const res = await fetch('http://196.223.240.154:8099/supapp/api/orders',{
+            method: 'GET',
+            headers: {
+                "accessToken":  `Bearer ${user_token.accessToken}`,
+                'Authorization': `Bearer ${user_token.accessToken}`
+            } ,
+        })
+        const data = await res.json()
+        setOrders(data.content)
+    }
+
+    useEffect(()=>{
+        getOrders();
+        getMenus();
+    },[])
+
+    return(
+        <AppContext.Provider value={{orders, menus}}>
+            {children}
+        </AppContext.Provider>
+    )
 
 }
